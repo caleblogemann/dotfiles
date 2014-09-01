@@ -1,0 +1,1 @@
+/Users/caleblogemann/.dotfiles/zsh/.zprezto/runcoms/zlogin

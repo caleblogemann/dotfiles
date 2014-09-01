@@ -1,1 +1,0 @@
-/Users/caleblogemann/.dotfiles/.zprezto/runcoms/zshrc
