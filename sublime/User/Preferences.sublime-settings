@@ -1,0 +1,33 @@
+{
+	"auto_complete_commit_on_tab": true,
+	"bold_folder_labels": true,
+	"caret_style": "phase",
+	"color_scheme": "Packages/User/Monokai Soda (SL).tmTheme",
+	"draw_white_space": "all",
+	"fade_fold_buttons": false,
+	"file_exclude_patterns":
+	[
+		"*.sublime-workspace",
+		"*.DS_Store",
+		"*.class",
+		"*.nb",
+		"*.pdf",
+		"*.log",
+		"*.aux"
+	],
+	"font_face": "Inconsolata",
+	"font_size": 22,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"scroll_past_end": true,
+	"soda_classic_tabs": true,
+	"soda_folder_icons": true,
+	"theme": "Soda Dark 3.sublime-theme",
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": true
+}

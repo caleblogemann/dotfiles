@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * Method: ${1}
+ * @throws Exception
+ */
+@Test
+public void ${1}Test() throws Exception {
+	${2}
+}
+]]></content>
+	<tabTrigger>@Test</tabTrigger>
+	<scope>source.java</scope>
+</snippet>

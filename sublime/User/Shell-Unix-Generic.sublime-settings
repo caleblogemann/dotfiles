@@ -1,0 +1,12 @@
+{
+	"extensions":
+	[
+		"zshenv",
+		"zshrc",
+		"zprofile",
+		"zpreztorc",
+		"prompt_myPrompt_setup",
+		".zshrc",
+		".zprofile"
+	]
+}

@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+\begin{flalign*}
+\text{LP} && \text{${1:max} \hfill}  z = ${2} &&
+\end{flalign*}
+s.t.
+\setcounter{equation}{0}
+\begin{align}
+${3} &\\${4:le} ${5}\\\\
+${6} &\\${7:le} ${8}\\\\
+${9} &\\${10:le} ${11}\\\\
+${12} &\ge 0 
+\end{align}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>LP</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.tex.latex</scope>
+</snippet>
