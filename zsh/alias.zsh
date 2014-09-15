@@ -9,6 +9,9 @@ alias reloadZPreztorc='. $ZDOTDIR/.zpreztorc'
 alias openZPreztorc='subl $ZDOTDIR/.zpreztorc'
 alias reloadZSHENV='. $ZDOTDIR/.zshenv'
 alias openZSHENV='subl $ZDOTDIR/.zshenv'
+alias reloadAlias='. $ZDOTDIR/alias.zsh'
+alias openAlias='subl $ZDOTDIR/alias.zsh'
+
 
 #################################################
 # Movement Aliases                              #
@@ -64,3 +67,6 @@ alias gba="git branch -a"
 # Misc Aliases                                  #
 #################################################
 alias redshiftdb="psql -h test-quosity-west-01.c9lob1qejqcs.us-west-2.redshift.amazonaws.com -p 5439 -U r1development development"
+alias top="sudo htop"
+alias htop="sudo htop"
+alias restartAudio="sudo killall coreaudiod"
