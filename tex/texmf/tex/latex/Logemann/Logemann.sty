@@ -1,0 +1,29 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{Logemann}[2014/09/08 Logemann Package]
+
+\RequirePackage{mathtools}
+
+% absolute value function
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+% Swap the definition of \abs* , so that \abs
+% resizes the size of the brackets, and the
+% starred version does not.
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+
+% Norm - length of a vector
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+
+% Floor function
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\let\oldfloor\floor
+\def\floor{\@ifstar{\oldfloor}{\oldfloor*}}
+
+% Ceiling function
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\let\oldceil\ceil
+\def\ceil{\@ifstar{\oldceil}{\oldceil*}}
+
+
