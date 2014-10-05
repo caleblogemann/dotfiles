@@ -70,3 +70,4 @@ alias redshiftdb="psql -h test-quosity-west-01.c9lob1qejqcs.us-west-2.redshift.a
 alias top="sudo htop"
 alias htop="sudo htop"
 alias restartAudio="sudo killall coreaudiod"
+alias sshWiebe="ssh cdl88254@wiebe.mathcs.bethel.edu"
