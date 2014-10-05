@@ -1,6 +1,5 @@
 <snippet>
-	<content><![CDATA[
-\\item[\\#$1] \\hfill \\\\
+	<content><![CDATA[\\item[\\#$1]
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>in</tabTrigger>
