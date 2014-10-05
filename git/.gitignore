@@ -1,1 +1,6 @@
 .DS_Store
+*.aux
+*.log
+*.sublime-workspace
+*.cache
+*.last-run
