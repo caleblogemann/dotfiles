@@ -26,4 +26,27 @@
 \let\oldceil\ceil
 \def\ceil{\@ifstar{\oldceil}{\oldceil*}}
 
+% Parenthesis
+\DeclarePairedDelimiter{\paren}{(}{)}
+\let\oldparen\paren
+\def\paren{\@ifstar{\oldparen}{\oldparen*}}
 
+% Curly Brackets
+\DeclarePairedDelimiter{\set}{\{}{\}}
+\let\oldset\set
+\def\set{\@ifstar{\oldset}{\oldset*}}
+
+\let\oldcos\cos
+\renewcommand{\cos}[1]{\oldcos\paren{#1}}
+
+\let\oldsin\sin
+\renewcommand{\sin}[1]{\oldsin\paren{#1}}
+
+\let\oldln\ln
+\renewcommand{\ln}[1]{\oldln\paren{#1}}
+
+\let\oldmin\min
+\renewcommand{\min}[1]{\oldmin\set{#1}}
+
+\let\oldmax\max
+\renewcommand{\max}[1]{\oldmax\set{#1}}
