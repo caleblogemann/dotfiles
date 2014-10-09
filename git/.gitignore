@@ -2,7 +2,3 @@
 *.aux
 *.log
 *.sublime-workspace
-*.cache
-*.last-run
-sublime/User/Package\ Control.last_run
-*.cache*
