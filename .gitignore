@@ -3,6 +3,7 @@
 .zcompdump
 .zcompdump.zwc
 vim/.vim/tmp/
+vim/.vim/bundle/
 sublime/User/Package\ Control.cache/
 sublime/User/Package\ Control.last-run
 sublime/User/Package\ Control.system-ca-bundle
