@@ -2,15 +2,15 @@
 # ZSH Aliases                                   #
 #################################################
 alias reloadZSHRC='. $ZDOTDIR/.zshrc'
-alias openZSHRC='subl $ZDOTDIR/.zshrc'
+alias openZSHRC='vim $ZDOTDIR/.zshrc'
 alias reloadZProfile='. $ZDOTDIR/.zprofile'
-alias openZProfile='subl $ZDOTDIR/.zprofile'
+alias openZProfile='vim $ZDOTDIR/.zprofile'
 alias reloadZPreztorc='. $ZDOTDIR/.zpreztorc'
-alias openZPreztorc='subl $ZDOTDIR/.zpreztorc'
+alias openZPreztorc='vim $ZDOTDIR/.zpreztorc'
 alias reloadZSHENV='. $ZDOTDIR/.zshenv'
-alias openZSHENV='subl $ZDOTDIR/.zshenv'
+alias openZSHENV='vim $ZDOTDIR/.zshenv'
 alias reloadAlias='. $ZDOTDIR/alias.zsh'
-alias openAlias='subl $ZDOTDIR/alias.zsh'
+alias openAlias='vim $ZDOTDIR/alias.zsh'
 
 
 #################################################
@@ -18,6 +18,10 @@ alias openAlias='subl $ZDOTDIR/alias.zsh'
 #################################################
 alias gotoHome="cd $HOME"
 alias gotoDocuments="gotoHome; cd Documents"
+alias gotoDownloads="gotoHome; cd Downloads"
+
+# personal projects
+alias gotoCode="gotoDocuments; cd Code"
 alias gotoDotfiles="gotoHome; cd .dotfiles"
 
 # work movement aliases
