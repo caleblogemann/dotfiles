@@ -7,10 +7,81 @@
     
     " last line can contain vim commands
     set modelines=1
+
+    " disable annoying sounds
+    " disable sounds on error
+    set noerrorbells
+    " enable visual bell instead of sound
+    set visualbell
+    " set visual bell to nothing
+    set t_vb=
+" }}}
+" Plugins {{{
+    filetype off "required for Vundle to run - may be turned back on afterwards
+
+    " if vundle is not installed clone it
+    if !isdirectory(expand("~/.vim/bundle/Vundle.vim/.git"))
+        !git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    endif
+
+    " include vundle in run time path
+    set runtimepath+=~/.dotfiles/vim/.vim/bundle/Vundle.vim
+
+    " vundle configuration {{{
+    call vundle#begin()
+
+        " Let vundle manage itself
+        Plugin 'gmarik/Vundle.vim'
+
+        " Fugitive - Git Wrapper
+        Plugin 'tpope/vim-fugitive'
+
+        " Gundo - accesses vim's undo tree
+        Plugin 'sjl/gundo.vim'
+
+        " ColorSchemes
+        """""""""""""""""""""""""""""""""""""""""
+        " Solarized
+        Plugin 'altercation/vim-colors-solarized'
+
+        " Molokai
+        Plugin 'tomasr/molokai'
+
+        " BadWolf
+        Plugin 'sjl/badwolf'
+
+        " Jellybeans
+        Plugin 'nanotech/jellybeans.vim'
+
+        " VividChalk
+        Plugin 'tpope/vim-vividchalk'
+
+        " Distinguished
+        Plugin 'Lokaltog/vim-distinguished'
+
+        " Many Colorschemes
+        Plugin 'flazz/vim-colorschemes'
+        """"""""""""""""""""""""""""""""""""""""
+
+    call vundle#end()
+    " }}}
+    filetype plugin indent on
+
+    " Gundo Settings {{{
+        nnoremap <leader>u :GundoToggle<CR>         
+    " }}}
 " }}}
 " Color / Syntax {{{
     " enable syntax processing
     syntax enable
+    
+    " set background to dark for solarized
+    set background=dark
+    " ColorScheme
+    colorscheme solarized
+
+    " tell vim to expect LaTeX not plain TeX
+    "let g:tex-flavor = "latex"
 " }}}
 " Tabs and Spaces {{{
     " how many visual spaces a tab counts for
@@ -41,11 +112,19 @@
     " provide graphical menu to cycle through autocomplete
     set wildmenu
 
+    " show line and column number at bottom
+    set ruler
+
     " only redraw when necessary, speeds up macros
     set lazyredraw
 
+    " don't wrap line
+    set nowrap
+
     " highlight matching brackets
     set showmatch
+    " number of tenths of a second to highlight matching brackets
+    set matchtime=2
 " }}}
 " Searching Settings {{{
     " search as characters are entered, incremental search
@@ -111,6 +190,15 @@
     " change L to go to end of line
     nnoremap L $
     nnoremap $ <nop>
+
+    " better window changing mappings
+    nnoremap <C-h> <C-w>h
+    nnoremap <C-j> <C-w>j
+    nnoremap <C-k> <C-w>k
+    nnoremap <C-l> <C-w>l
+
+    " call ToggleNumber function
+    nnoremap <leader>3 :call ToggleNumber()<CR>
 
     " visually highlight text from last insert
     nnoremap gV '['v']
