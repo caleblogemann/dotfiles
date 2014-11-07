@@ -15,6 +15,16 @@
     set visualbell
     " set visual bell to nothing
     set t_vb=
+
+    " enable mouse for all modes
+    set mouse=a
+" }}}
+" Leader Assignments {{{
+    " map leader key
+    let mapleader=","
+
+    " map local leader key, leader key for filetype specific mappings
+    let maplocalleader="\\"
 " }}}
 " Plugins {{{
     filetype off "required for Vundle to run - may be turned back on afterwards
@@ -36,10 +46,16 @@
         " Fugitive - Git Wrapper
         Plugin 'tpope/vim-fugitive'
 
+        " NerdTree
+        Plugin 'scrooloose/nerdtree'
+
         " Gundo - accesses vim's undo tree
         Plugin 'sjl/gundo.vim'
 
-        " ColorSchemes
+        " Indent Guides
+        Plugin 'nathanaelkane/vim-indent-guides'
+
+        " ColorSchemes {{{
         """""""""""""""""""""""""""""""""""""""""
         " Solarized
         Plugin 'altercation/vim-colors-solarized'
@@ -61,7 +77,7 @@
 
         " Many Colorschemes
         Plugin 'flazz/vim-colorschemes'
-        """"""""""""""""""""""""""""""""""""""""
+        " }}}
 
     call vundle#end()
     " }}}
@@ -98,6 +114,9 @@
      
     " keep current indentation level
     set autoindent
+
+    " use smart indenting
+    set smartindent
 " }}}
 " UI Config - Random Visual Settings {{{
     " show line numbers on left edge
@@ -123,8 +142,12 @@
 
     " highlight matching brackets
     set showmatch
+    
     " number of tenths of a second to highlight matching brackets
     set matchtime=2
+
+    " set number of lines for cmd window
+    set cmdheight=2
 " }}}
 " Searching Settings {{{
     " search as characters are entered, incremental search
@@ -152,13 +175,6 @@
 
     " fold is based indentation
     set foldmethod=indent
-" }}}
-" Leader Assignments {{{
-    " map leader key
-    let mapleader=","
-
-    " map local leader key, leader key for filetype specific mappings
-    let maplocalleader="\\"
 " }}}
 " Custom Mappings {{{
 " Insert Mode Mappings {{{
@@ -215,12 +231,27 @@
     vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>
     " surround visually highlighted text with double quote 
     vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
+
+    " change H to go to beginning of line
+    vnoremap H ^
+    vnoremap ^ <nop>
+
+    " change L to go to end of line
+    vnoremap L $h
+    vnoremap $ <nop>
+
+    vnoremap fd <esc>
 " }}}
 " End of Custom Mappings Section }}}
 " Abbreviations {{{
     " Fix typos
     iabbrev thm theorem
     iabbrev thereom theorem
+    iabbrev Thm Theorem
+    iabbrev Thereom Theorem
+    iabbrev Reimann Riemann
+
+    iabbrev \i \item[\#
 " }}}
 " Backups {{{
     " enable backups
