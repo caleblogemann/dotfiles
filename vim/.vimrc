@@ -52,6 +52,9 @@
         " Gundo - accesses vim's undo tree
         Plugin 'sjl/gundo.vim'
 
+        " Airline - status line
+        Plugin 'bling/vim-airline'
+
         " Indent Guides
         Plugin 'nathanaelkane/vim-indent-guides'
 
@@ -86,6 +89,9 @@
     " Gundo Settings {{{
         nnoremap <leader>u :GundoToggle<CR>         
     " }}}
+    " NERDTree Settings {{{
+    nnoremap <leader>p :NERDT
+    " }}}
 " }}}
 " Color / Syntax {{{
     " enable syntax processing
@@ -117,6 +123,48 @@
 
     " use smart indenting
     set smartindent
+
+    augroup vimrc_autocmds
+        autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
+        autocmd BufEnter * match OverLength /\%82v.*/
+    augroup END
+
+    "function ShowSpaces(...)
+    "    let @/='\v(\s+$)|( +\ze\t)'
+    "    let oldhlsearch=&hlsearch
+    "    if !a:0
+    "        let &hlsearch=!&hlsearch
+    "    else
+    "        let &hlsearch=a:1
+    "    end
+    "    return oldhlsearch
+    "endfunction
+    
+    "function TrimSpaces() range
+    "     let oldhlsearch=ShowSpaces(1)
+    "    execute a:firstline.",".a:lastline."substitute ///gec"
+    "    let &hlsearch=oldhlsearch
+    "endfunction
+    
+    nnoremap <leader>sts :call ShowSpaces()<CR>
+    vnoremap <leader>dts :call TrimSpaces()<CR>
+
+    " function to show spaces as underlines
+    " let g:HLSpace = 1
+    " let g:HLColorScheme = g:colors_name
+    "function! ToggleSpaceUnderscoring()
+    "     if g:HLSpace
+    "        highlight Search cterm=underline gui=underline ctermbg=none guibg=none ctermfg=none guifg=none
+    "        let @/ = " "
+    "    else
+    "        highlight clear
+    "        silent colorscheme "".g:HLColorScheme
+    "        let @/ = ""
+    "    endif
+    "    let g:HLSpace = !g:HLSpace
+    "endfunction
+
+    "nnoremap <silent> <leader>ss :call ToggleSpaceUnderscoring()<CR>
 " }}}
 " UI Config - Random Visual Settings {{{
     " show line numbers on left edge
@@ -142,12 +190,17 @@
 
     " highlight matching brackets
     set showmatch
-    
+
     " number of tenths of a second to highlight matching brackets
     set matchtime=2
 
     " set number of lines for cmd window
     set cmdheight=2
+
+    " show tabs and eol
+    set list
+    " set how tabs eol are shown
+    set listchars=tab:▸\ ,eol:¬
 " }}}
 " Searching Settings {{{
     " search as characters are entered, incremental search
@@ -175,6 +228,11 @@
 
     " fold is based indentation
     set foldmethod=indent
+
+    " automatically save view and load view with 
+    " entering and exiting files
+    autocmd BufWinLeave *.* mkview
+    autocmd BufWinEnter *.* silent loadview
 " }}}
 " Custom Mappings {{{
 " Insert Mode Mappings {{{
@@ -224,7 +282,13 @@
     
     " surround current word with single quotes
     nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
-    
+
+    " save buffer
+    nnoremap <leader>w :w<CR>
+
+    " quit buffer
+    nnoremap <leader>q :q<CR>
+
 " End of Normal Mode Mappings }}}
 " Visual Mode Mappings {{{
     " surround visually highlighted text with single quote 
@@ -249,9 +313,10 @@
     iabbrev thereom theorem
     iabbrev Thm Theorem
     iabbrev Thereom Theorem
+    iabbrev Theroem Theorem
     iabbrev Reimann Riemann
 
-    iabbrev \i \item[\#
+    iabbrev \i \item[\# <left>
 " }}}
 " Backups {{{
     " enable backups
