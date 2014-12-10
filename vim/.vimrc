@@ -126,8 +126,10 @@
 
     augroup vimrc_autocmds
         autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
-        autocmd BufEnter * match OverLength /\%82v.*/
+        "autocmd BufEnter * match OverLength /\%82v.*/
     augroup END
+    nnoremap <leader>ll :match OverLength /\%82v.*/<CR>
+    nnoremap <leader>nll :match none<CR>
 
     "function ShowSpaces(...)
     "    let @/='\v(\s+$)|( +\ze\t)'
