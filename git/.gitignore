@@ -3,5 +3,10 @@
 *.log
 *.fls
 *.fdb_latexmk
+*.bbl
+*.blg
+*.lof
+*.toc
+*.lot
 *.class
 *.sublime-workspace
