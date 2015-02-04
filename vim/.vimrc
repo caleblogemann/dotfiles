@@ -317,6 +317,7 @@
     iabbrev Thereom Theorem
     iabbrev Theroem Theorem
     iabbrev Reimann Riemann
+    iabbrev teh the
 
     iabbrev \i \item[\# <left>
 " }}}
