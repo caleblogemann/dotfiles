@@ -12,7 +12,6 @@ alias openZSHENV='vim $ZDOTDIR/.zshenv'
 alias reloadAlias='. $ZDOTDIR/alias.zsh'
 alias openAlias='vim $ZDOTDIR/alias.zsh'
 
-
 #################################################
 # Movement Aliases                              #
 #################################################
@@ -70,10 +69,22 @@ alias gba="git branch -a"
 #################################################
 # Misc Aliases                                  #
 #################################################
-alias redshiftdb="psql -h test-quosity-west-01.c9lob1qejqcs.us-west-2.redshift.amazonaws.com -p 5439 -U r1development development"
+alias redshiftdb="psql -h test-quosity-west-01.c9lob1qejqcs.us-west-2.redshift.amazonaws.com
+    -p 5439 -U r1development development"
 alias top="sudo htop"
 alias htop="sudo htop"
 alias restartAudio="sudo killall coreaudiod"
 alias sshWiebe="ssh cdl88254@wiebe.mathcs.bethel.edu"
 alias sshCluster="ssh cdl88254@cluster-frontend.mathcs.bethel.edu"
-alias rmLatex="rm *.aux *.log *.fls *.fdb_latexmk *.bbl *.blg *.lof *.lot *.toc"
+
+#################################################
+# Vim                                           #
+#################################################
+alias vim="/usr/local/bin/vim"
+
+#################################################
+# Latex                                         #
+#################################################
+# set null_glob so that rm still runs if pattern is not matched
+setopt null_glob
+alias rmLatex="rm *.aux(N) *.log(N) *.fls(N) *.fdb_latexmk(N) *.bbl(N) *.blg(N) *.lof(N) *.lot(N) *.toc(N) *.bcf(N) *.run.xml(N) *.nav(N) *.out(N) *.snm(N)"
