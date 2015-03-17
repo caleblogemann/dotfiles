@@ -1,4 +1,7 @@
+# mac specific
 .DS_Store
+
+# latex files
 *.aux
 *.log
 *.fls
@@ -8,5 +11,9 @@
 *.lof
 *.toc
 *.lot
+
+# java 
 *.class
+
+# sublime
 *.sublime-workspace
