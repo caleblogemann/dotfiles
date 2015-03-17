@@ -17,3 +17,5 @@
 
 # sublime
 *.sublime-workspace
+*.merged-ca-bundle
+*.user-ca-bundle
