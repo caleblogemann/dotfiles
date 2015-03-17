@@ -18,6 +18,9 @@
 
     " enable mouse for all modes
     set mouse=a
+
+    " fix backspace key problems
+    set backspace=indent,eol,start
 " }}}
 " Leader Assignments {{{
     " map leader key
@@ -44,10 +47,10 @@
         Plugin 'gmarik/Vundle.vim'
 
         " Fugitive - Git Wrapper
-        Plugin 'tpope/vim-fugitive'
+        "Plugin 'tpope/vim-fugitive'
 
         " NerdTree
-        Plugin 'scrooloose/nerdtree'
+        "Plugin 'scrooloose/nerdtree'
 
         " Gundo - accesses vim's undo tree
         Plugin 'sjl/gundo.vim'
@@ -57,6 +60,12 @@
 
         " Indent Guides
         Plugin 'nathanaelkane/vim-indent-guides'
+
+        " Snippets
+        Plugin 'SirVer/ultisnips'
+
+        " Completions
+        "Plugin 'Valloric/YouCompleteMe'
 
         " ColorSchemes {{{
         """""""""""""""""""""""""""""""""""""""""
@@ -90,7 +99,18 @@
         nnoremap <leader>u :GundoToggle<CR>         
     " }}}
     " NERDTree Settings {{{
-    nnoremap <leader>p :NERDT
+        nnoremap <leader>p :NERDT
+    " }}}
+    " Ultisnips Settings {{{
+       " Trigger configuration. Do not use <tab> if you use
+       " https://github.com/Valloric/YouCompleteMe.
+       let g:UltiSnipsExpandTrigger="<tab>"
+       let g:UltiSnipsJumpForwardTrigger="<tab>"
+       let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+       " If you want :UltiSnipsEdit to split your window.
+       let g:UltiSnipsEditSplit="vertical"
+       nnoremap <leader>s :UltiSnipsEdit<CR>
     " }}}
 " }}}
 " Color / Syntax {{{
@@ -243,6 +263,9 @@
     inoremap jk <esc>
     inoremap <esc> <nop>
 
+    " new line
+    inoremap <leader>n <esc>80\|gea<CR><esc>$a
+
 " End of Insert Mode Mappings }}}
 " Normal Mode Mappings {{{
 
@@ -285,11 +308,28 @@
     " surround current word with single quotes
     nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 
+    " goto column 80
+    nnoremap <leader>f 80\|
+
     " save buffer
     nnoremap <leader>w :w<CR>
 
     " quit buffer
     nnoremap <leader>q :q<CR>
+
+    " copy line and paste below
+    nnoremap <leader>p yyp
+
+    " Latex Mappings {{{
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    " build tex document
+    nnoremap <leader>b :!latexmk -pdf %<CR>
+
+    " open pdf document
+    nnoremap <leader>o :!open "%:r".pdf<CR>
+    " delete latex files
+    nnoremap <leader>rl :!rmLatex<CR>
+    " End of Latex Mappings }}}
 
 " End of Normal Mode Mappings }}}
 " Visual Mode Mappings {{{
@@ -319,17 +359,21 @@
     iabbrev Reimann Riemann
     iabbrev teh the
 
-    iabbrev \i \item[\# <left>
+    "iabbrev \i \item[\#
+    "iabbrev \il \item[()]
+    "iabbrev \align* \begin{align*}<CR>\end{align*}
+    "iabbrev enum \begin{enumerate}<CR>\end{enumerate}
 " }}}
 " Backups {{{
     " enable backups
-    set backup
+    set nobackup
+    set writebackup
 
     " set backup directory place in vim directory 
     set backupdir=~/.vim/tmp
 
     " file names that match will not be backup
-    set backupskip=~/.vim/tmp/*
+    "set backupskip=~/.vim/tmp/*
 
     " set directory to store swp files
     set directory=~/.vim/tmp
