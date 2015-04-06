@@ -1,6 +1,32 @@
 " Caleb Logemann 
 " vimrc
 
+" important
+" moving around, searching and patterns
+" tags
+" displaying text
+" syntax, highlighting and spelling
+" multiple windows
+" multiple tab pages
+" terminal
+" using the mouse
+" printing
+" messages and info
+" selecting text
+" editing text
+" tabs and indenting
+" folding
+" diff mode
+" mapping
+" reading and writing files
+" the swap file
+" command line editing
+" executing external commands
+" running make and jumping to errors
+" language specific
+" multi-byte characters
+" various
+
 " Misc {{{
     " set nocompatible
     set nocompatible
@@ -52,6 +78,9 @@
         " NerdTree
         "Plugin 'scrooloose/nerdtree'
 
+        " NERD Commenter
+        Plugin 'scrooloose/nerdcommenter'
+
         " Gundo - accesses vim's undo tree
         Plugin 'sjl/gundo.vim'
 
@@ -64,8 +93,14 @@
         " Snippets
         Plugin 'SirVer/ultisnips'
 
+        " Snippet Repository
+        "Plugin 'honza/vim-snippets'
+
         " Completions
         "Plugin 'Valloric/YouCompleteMe'
+
+        " Matlab
+        Plugin 'MatlabFilesEdition'
 
         " ColorSchemes {{{
         """""""""""""""""""""""""""""""""""""""""
@@ -277,7 +312,7 @@
     " open vimrc
     nnoremap <leader>ev :vsplit $MYVIMRC<CR>
     nnoremap <leader>sv :source $MYVIMRC<CR>
-    
+
     " move vertically by visual line instead of wrapped lines
     nnoremap j gj
     nnoremap k gk
@@ -317,8 +352,14 @@
     " quit buffer
     nnoremap <leader>q :q<CR>
 
+    " reload file
+    nnoremap <leader>e :e<CR>
+
     " copy line and paste below
     nnoremap <leader>p yyp
+
+    " detect filetype apply syntax
+    nnoremap <leader>ft :filetype detect<CR>
 
     " Latex Mappings {{{
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -333,10 +374,12 @@
 
 " End of Normal Mode Mappings }}}
 " Visual Mode Mappings {{{
-    " surround visually highlighted text with single quote 
+    " surround visually highlighted text with single quote
     vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>
-    " surround visually highlighted text with double quote 
+    " surround visually highlighted text with double quote
     vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
+    " surround visually highlighted text with dollar sign
+    vnoremap <leader>$ <esc>`<i$<esc>`>la$<esc>
 
     " change H to go to beginning of line
     vnoremap H ^
@@ -347,6 +390,9 @@
     vnoremap $ <nop>
 
     vnoremap fd <esc>
+
+    " copy to clipboard
+    vnoremap <leader>c "+y
 " }}}
 " End of Custom Mappings Section }}}
 " Abbreviations {{{
@@ -358,6 +404,7 @@
     iabbrev Theroem Theorem
     iabbrev Reimann Riemann
     iabbrev teh the
+    iabbrev whcih which
 
     "iabbrev \i \item[\#
     "iabbrev \il \item[()]
