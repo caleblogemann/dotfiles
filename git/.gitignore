@@ -11,6 +11,11 @@
 *.lof
 *.toc
 *.lot
+*.nav
+*.out
+*.snm
+*.bcf
+*.run.xml
 
 # java 
 *.class

@@ -1,7 +1,0 @@
-{
-	"cmd": ["pdflatex" , "$file_name"],
-
-	"path": "/usr/local/texlive/2013/bin/x86_64-darwin:$PATH",
-	"selector": "text.tex.latex",
-	"file_regex": "^(...*?):([0-9]+): ([0-9]*)([^\\.]+)"
-}

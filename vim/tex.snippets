@@ -1,0 +1,113 @@
+################################################################################
+# Environments
+################################################################################
+snippet begin "begin" b
+\begin{$1}
+    $0
+\end{$1}
+endsnippet
+
+snippet enum "enumerate" b
+\begin{enumerate}
+    $0
+\end{enumerate}
+endsnippet
+
+snippet align* "align*" b
+\begin{align*}
+    $0
+\end{align*}
+endsnippet
+
+snippet align "align" b
+\begin{align}
+    $0
+\end{align}
+endsnippet
+
+snippet center "center" b
+\begin{center}
+    $0
+\end{center}
+endsnippet
+
+snippet tab "tabular" b
+\begin{tabular}{$1}
+    \toprule
+    $0
+    \bottomrule
+\end{tabular}
+endsnippet
+
+snippet table "table" b
+\begin{table}
+    \centering
+    \begin{tabular}{$1}
+        \toprule
+        $0
+        \bottomrule
+    \end{tabular}
+    \caption{$2}
+    \label{tab:$3}
+\end{table}
+endsnippet
+
+snippet fig "figure" b
+\begin{figure}
+    \centering
+    \includegraphics[scale=$1]{Figures/$2}
+    \caption{$3}
+    \label{fig:$4}
+\end{figure}$0
+endsnippet
+
+snippet frame "Beamer Frame" b
+\begin{frame}
+    \frametitle{$1}
+    $0
+\end{frame}
+endsnippet
+
+snippet i "item" b
+\item$0
+endsnippet
+
+snippet in "item numbered" b
+\item[\#$1]$0
+endsnippet
+
+snippet il "item lettered" b
+\item[($1)]$0
+endsnippet
+
+snippet sec "Section" b
+\section{$1}$0
+endsnippet
+
+snippet sec* "Section nonnumbered" b
+\section*{$1}$0
+endsnippet
+
+snippet sub "Subsection" b
+\subsection{$1}$0
+endsnippet
+
+snippet sub* "Subsection nonnumbered" b
+\subsection*{$1}$0
+endsnippet
+
+snippet subs "Subsubsection" b
+\subsubsection{$1}$0
+endsnippet
+
+snippet subs* "Subsubsection nonnumbered" b
+\subsubsection*{$1}$0
+endsnippet
+
+################################################################################
+# Mathematics
+################################################################################
+
+snippet fr "fraction"
+\frac{$1}{$2} $0
+endsnippet

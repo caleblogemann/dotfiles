@@ -1,0 +1,287 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Caleb Logemann 
+" vimrc
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" set all settings in this file
+" source separate files for plugins, mappings, functions, and abbreviations
+
+" {{{ Settings - All options
+" follows organization as discribed in :options
+" {{{ important
+    " set so not compatible with vi
+    " if set compatible - then vim will be limited to be more like vi
+    set nocompatible
+
+    " set runtimepath if necessary
+    " set runtimepath+=
+" }}}
+" {{{ moving around, searching and patterns
+    " this shows matches to search text while being typed
+    set incsearch
+" }}}
+" {{{ tags
+" }}}
+" {{{ displaying text
+    " set text not to wrap around lines
+    set nowrap
+    
+    " set height of command window at bottom of screen
+    " in number of lines
+    set cmdheight=2
+
+    " only redraw when necessary, speeds up macros
+    set lazyredraw
+
+    " show tabs and eol
+    set list
+
+    " set how tabs eol are shown
+    set listchars=tab:▸\ ,eol:¬
+
+    " show line number for each line
+    set number
+
+    " set width of column for line number
+    set numberwidth=4
+" }}}
+" {{{ syntax, highlighting and spelling
+    " set dark for terminal vim
+    " needed for some colorschemes
+    set background=dark
+
+    " allow vim to detect filetype
+    filetype on
+
+    " enable syntax processing
+    syntax enable    
+
+    " highlight all matches of last search
+    set hlsearch
+
+    " highlight line that cursor is on
+    set cursorline
+
+    " do not highlight spelling mistake
+    " use mapping <localleader>sc to enable spellchecking in local buffer
+    set nospell
+" }}}
+" {{{ multiple windows
+    " set so that status line is always displayed even with only one window
+    set laststatus=2
+
+    " set statusline or use vim-airline plugin
+    "set statusline=
+
+    " allow buffers to be hidden and not closed
+    " don't unload buffer when no longer shown in a window
+    set hidden
+" }}}
+" {{{ multiple tab pages
+    " show tabline always no matter how many tabs are open
+    set showtabline=2
+
+    " possibly customize tabline
+    " or use vim-airline to customize tabline
+" }}}
+" {{{ terminal
+    " make sure vim knows that this is a color terminal
+    set term=xterm-256color
+" }}}
+" {{{ using the mouse
+    " enable mouse in all modes
+    set mouse=a
+" }}}
+" {{{ messages and info
+    " show partial command in status line
+    set showcmd 
+
+    " show current mode in bottom left
+    set showmode
+
+    " show cursor position in status line
+    set ruler
+
+    " disable annoying warning bells
+    set noerrorbells
+    " enable visualbell and set to nothing
+    set visualbell
+    set t_vb=
+" }}}
+" {{{ selecting text
+" }}}
+" {{{ editing text
+    " fix backspace key problems
+    set backspace=indent,eol,start
+
+    " show matching bracket
+    set showmatch
+
+    " length of time for showmatch in tenths of a second
+    set matchtime=2
+" }}}
+" {{{ tabs and indenting
+    " set number of spaces a <Tab> stand for
+    set tabstop=4
+
+    " number of spaces to be used for (auto)indent
+    set shiftwidth=4
+
+    " tab inserts shiftwidth spaces
+    set smarttab
+
+    " number of spaces to insert for a <Tab>
+    set softtabstop=4
+
+    " when shifting lines with "<<" or ">>" round to shiftwidth
+    set shiftround
+
+    " exand <Tab> to spaces
+    set expandtab
+
+    " automatically indent new lines
+    set autoindent
+
+    " do smarter indenting
+    set smartindent
+
+    " set special indenting for C code
+    set cindent
+" }}}
+" {{{ folding
+    " enable folding
+    set foldenable
+
+    " folds start open
+    set foldlevelstart=10
+
+    " set default fold method
+    " optinons "indent", "marker", "syntax"
+    set foldmethod=indent
+
+    " set maximum fold depth, when 'foldmethod' is "indent" or "syntax"
+    set foldnestmax=10
+" }}}
+" {{{ diff mode
+" }}}
+" {{{ mapping
+    " allow timing out halfway into a mapping
+    set timeout
+
+    " time in msec for 'timeout'
+    set timeoutlen=500
+" }}}
+" {{{ reading and writing files
+    " enable vim to read settings from modelines when reading a file
+    set modeline
+
+    " just last line can be used as a modeline
+    " use
+    " vim:exampleOption=a:exampleOption2=b
+    set modelines=1
+
+    " don't make backups of files
+    " see :help backup-table
+    set nowritebackup
+    set nobackup
+
+    " if file has been modified outside of vim
+    " and no edits have been made in vim
+    " automatically reread file
+    set autoread
+" }}}
+" {{{ the swap file
+    " enable writing of swapfile
+    " good if vim crashes
+    " prevents opening same file in another vim
+    set swapfile
+" }}}
+" {{{ command line editing
+    " show a list of matches when completing
+    set wildmenu
+" }}}
+" {{{ executing external commands
+
+" }}}
+" {{{ running make and jumping to errors
+" }}}
+" {{{ language specific
+" }}}
+" {{{ multi-byte characters
+" }}}
+" {{{ various
+" }}}
+" }}}
+
+" Leader Assignments {{{
+    " map leader key
+    let mapleader=","
+
+    " map local leader key, leader key for filetype specific mappings
+    let maplocalleader="\\"
+" }}}
+
+" {{{ Autocommands
+    " automatically save view and load view with 
+    " entering and exiting files
+    autocmd BufWinLeave,BufWrite *.* mkview
+    autocmd BufWinEnter *.* silent loadview
+" }}}
+
+" Plugins
+source ~/dotfiles/vim/plugins.vim
+
+" Mappings
+source ~/dotfiles/vim/mappings.vim
+
+" Functions
+source ~/dotfiles/vim/functions.vim
+
+" Abbreviations
+source ~/dotfiles/vim/abbreviations.vim
+
+" {{{ Functions to do with spacing TODO: Look at later
+    "augroup vimrc_autocmds
+    "    autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
+        "autocmd BufEnter * match OverLength /\%82v.*/
+    "augroup END
+    "nnoremap <leader>ll :match OverLength /\%82v.*/<CR>
+    "nnoremap <leader>nll :match none<CR>
+
+    "function ShowSpaces(...)
+    "    let @/='\v(\s+$)|( +\ze\t)'
+    "    let oldhlsearch=&hlsearch
+    "    if !a:0
+    "        let &hlsearch=!&hlsearch
+    "    else
+    "        let &hlsearch=a:1
+    "    end
+    "    return oldhlsearch
+    "endfunction
+    
+    "function TrimSpaces() range
+    "     let oldhlsearch=ShowSpaces(1)
+    "    execute a:firstline.",".a:lastline."substitute ///gec"
+    "    let &hlsearch=oldhlsearch
+    "endfunction
+    
+    "nnoremap <leader>sts :call ShowSpaces()<CR>
+    "vnoremap <leader>dts :call TrimSpaces()<CR>
+
+    " function to show spaces as underlines
+    " let g:HLSpace = 1
+    " let g:HLColorScheme = g:colors_name
+    "function! ToggleSpaceUnderscoring()
+    "     if g:HLSpace
+    "        highlight Search cterm=underline gui=underline ctermbg=none guibg=none ctermfg=none guifg=none
+    "        let @/ = " "
+    "    else
+    "        highlight clear
+    "        silent colorscheme "".g:HLColorScheme
+    "        let @/ = ""
+    "    endif
+    "    let g:HLSpace = !g:HLSpace
+    "endfunction
+
+    "nnoremap <silent> <leader>ss :call ToggleSpaceUnderscoring()<CR>
+" }}}
+" vim:foldmethod=marker:foldlevel=0

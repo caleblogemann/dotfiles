@@ -1,0 +1,24 @@
+brew
+    python
+    git
+    wesnoth
+    vim
+    macvim
+    openssl
+    node
+
+Hombrew Cask 
+    skype
+    Google Chrome
+    Google Drive
+    Dropbox
+    Firefox
+    iTerm
+    vlc
+
+More research
+    mongodb
+    R - statistics package
+    postgresql
+    mysql
+

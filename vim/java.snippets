@@ -1,0 +1,54 @@
+################################################################################
+# Simple word snippets
+################################################################################
+snippet pr "private" b
+private $0
+endsnippet 
+
+snippet po "protected" b
+protected $0
+endsnippet 
+
+snippet pu "public" b
+public $0
+endsnippet 
+
+snippet st "static"
+static $0
+endsnippet 
+
+snippet p "print" b
+System.out.print($1);
+$0
+endsnippet 
+
+snippet pl "print line" b
+System.out.println($1);
+$0
+endsnippet 
+
+snippet re "return" b
+return $0
+endsnippet
+
+################################################################################
+# Java control snippets
+################################################################################
+snippet for "for" b
+for($1; $2; $3){
+	$0
+}
+endsnippet
+
+snippet fore "for each" b
+for($1: $2){
+	$0
+}
+endsnippet
+
+snippet wh "while" b
+while ($1){
+	$0
+}
+endsnippet
+
