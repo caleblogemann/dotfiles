@@ -1,0 +1,87 @@
+################################################################################
+# ZSHRC - Caleb Logemann
+################################################################################
+
+################################################################################
+# History Settings
+################################################################################
+    # number of lines to store for one session
+    export HISTSIZE=1000
+    # number of lines to save in $HISTFILE
+    export SAVEHIST=1000
+    # file to save history of commands to
+    export HISTFILE=~/dotfiles/zsh/zsh_history
+
+    # History options
+    # Append history to the end of $HISTFILE instead of overwriting history
+    setopt APPEND_HISTORY
+    # append each line to the history file as it is executed
+    setopt INC_APPEND_HISTORY
+    # set so the history stores time of command and elapsed time of command
+    setopt EXTENDED_HISTORY
+    # set so that all duplicate commands are not kept
+    setopt HIST_IGNORE_ALL_DUPS
+
+################################################################################
+# ZGEN Settings
+################################################################################
+    # source zgen
+    source $HOME/dotfiles/zsh/zgen/zgen.zsh
+
+    # check if there's no init script
+    if ! zgen saved; then
+        echo "Creating a zgen save"
+
+        #zgen oh-my-zsh
+
+        # plugins
+        #zgen oh-my-zsh plugins/git
+        #zgen oh-my-zsh plugins/sudo
+        #zgen oh-my-zsh plugins/command-not-found
+        zgen load zsh-users/zsh-syntax-highlighting
+        zgen load zsh-users/zsh-history-substring-search
+
+        # change ... to ../..
+        zgen load knu/zsh-manydots-magic
+
+        # directory colors
+#        zgen load joel-porquet/zsh-dircolors-solarized.git
+
+        # completions
+        zgen load zsh-users/zsh-completions src
+
+        # theme
+        zgen load mafredri/zsh-async
+        zgen load sindresorhus/pure
+
+        # save all to init script
+        zgen save
+    fi
+
+    # zsh-history-substring-search settings
+    zmodload zsh/terminfo
+    bindkey "$terminfo[kcuu1]" history-substring-search-up
+    bindkey "$terminfo[kcud1]" history-substring-search-down
+    #bind k and j for VI mode
+    bindkey -M vicmd 'k' history-substring-search-up
+    bindkey -M vicmd 'j' history-substring-search-down
+
+    # load manydots
+    autoload -Uz manydots-magic
+    manydots-magic
+
+################################################################################
+# Personal Settings
+################################################################################
+    # source all alias files
+    for aliasFile in ~/dotfiles/*/alias.zsh; do
+        source $aliasFile
+    done
+
+################################################################################
+# Color Settings
+################################################################################
+    # between quotation marks is the tool output for LS_COLORS
+    export CLICOLOR=1;
+    export LSCOLORS=exfxcxdxbxegedabagacad
+    zstyle ':completion:*:default' list-colors ${(s.:.)LSCOLORS}

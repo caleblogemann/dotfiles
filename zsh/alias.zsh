@@ -30,6 +30,9 @@
         alias gotoUndergradPhysics='gotoUndergrad; cd Physics'
         alias gotoUndergradGenEd='gotoUndergrad; cd General\ Education'
         alias gotoGrad='gotoEducation; cd Graduate'
+        alias gotoGradMath='gotoGrad; cd Mathematics'
+        alias gotoGradStats='gotoGrad; cd Statistics'
+        alias gotoGradTeaching='gotoGrad; cd Teaching'
 
         # Specific classes
             alias gotoCombinatorics='gotoUndergradMath; cd Combinatorics'
@@ -43,6 +46,12 @@
             alias gotoOperatingSystems='gotoUndergradCS; cd OperatingSystems'
             alias gotoSpanish='gotoUndergradGenEd; cd Spanish'
             alias gotoPst='gotoUndergradGenEd; cd PstIntercultural'
+            alias gotoSTAT542='gotoGradStats; cd STAT542ProbabilityStatisticsI'
+            alias gotoMATH140='gotoGradTeaching; cd MATH140CollegeAlgebra'
+            alias gotoMATH519='gotoGradMath; cd MATH519MethodsAppliedMathI'
+            alias gotoMATH561='gotoGradMath; cd MATH561NumericalAnalysisI'
+            alias gotoMATH591='gotoGradMath; cd MATH591OrientationSeminarI'
+            alias gotoMATH507='gotoGradMath; cd MATH507AppliedLinearAlgebra'
 
 #################################################
 # Maven Aliases                                 #
