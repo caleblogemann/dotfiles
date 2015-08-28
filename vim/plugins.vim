@@ -11,8 +11,10 @@
 filetype off 
 
 " if vundle is not installed clone it
+let vundleInstalled=0
 if !isdirectory(expand("~/.vim/bundle/Vundle.vim/.git"))
     !git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    let vundleInstalled=1
 endif
 
 " include vundle in run time path
@@ -82,6 +84,10 @@ call vundle#begin()
 
 " turn on filetype and plugins
 filetype plugin indent on
+
+if vundleInstalled
+    PluginInstall
+endif
 
 " set colorscheme from list of configured colorschemes
 colorscheme solarized
