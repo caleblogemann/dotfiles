@@ -45,7 +45,7 @@ call vundle#begin()
     "Plugin 'nathanaelkane/vim-indent-guides'
 
     " Snippets
-    "Plugin 'SirVer/ultisnips'
+    Plugin 'SirVer/ultisnips'
 
     " Snippet Repository
     "Plugin 'honza/vim-snippets'
@@ -54,7 +54,7 @@ call vundle#begin()
     "Plugin 'Valloric/YouCompleteMe'
 
     " Matlab
-    "Plugin 'MatlabFilesEdition'
+    Plugin 'MatlabFilesEdition'
 
     " ColorSchemes {{{
     """""""""""""""""""""""""""""""""""""""""
@@ -114,5 +114,9 @@ colorscheme solarized
     " If you want :UltiSnipsEdit to split your window.
     let g:UltiSnipsEditSplit="vertical"
     nnoremap <leader>s :UltiSnipsEdit<CR>
+
+    " Added ~/dotfiles/vim to runtimepath so that Ultisnips directory
+    " can be detected and snippets can be stored in git repo
+    let g:UltiSnipsSnippetsDir = $HOME.'/dotfiles/vim/Ultisnips'
 " }}}
 " vim:foldmethod=marker:foldlevel=0
