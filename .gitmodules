@@ -1,3 +1,6 @@
 [submodule "zsh/zgen"]
 	path = zsh/zgen
 	url = https://github.com/tarjoilija/zgen.git
+[submodule "homebrew/localInstall"]
+	path = homebrew/localInstall
+	url = https://github.com/Homebrew/homebrew.git
