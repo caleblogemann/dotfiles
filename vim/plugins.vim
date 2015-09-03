@@ -7,9 +7,6 @@
 " use the command :PluginInstall to install
 " to add a plugin use command "Plugin github/repo"
 
-"required for Vundle to run - may be turned back on afterwards
-filetype off 
-
 " if vundle is not installed clone it
 let vundleInstalled=0
 if !isdirectory(expand("~/.vim/bundle/Vundle.vim/.git"))
@@ -21,6 +18,8 @@ endif
 set runtimepath+=~/.vim/bundle/Vundle.vim
 
 " vundle configuration {{{
+"required for Vundle to run - may be turned back on afterwards
+filetype off 
 call vundle#begin()
 
     " Let vundle manage itself
@@ -80,10 +79,8 @@ call vundle#begin()
     Plugin 'flazz/vim-colorschemes'
     " }}}
     call vundle#end()
+    filetype plugin indent on
     " }}}
-
-" turn on filetype and plugins
-filetype plugin indent on
 
 if vundleInstalled
     PluginInstall
@@ -117,6 +114,7 @@ colorscheme solarized
 
     " Added ~/dotfiles/vim to runtimepath so that Ultisnips directory
     " can be detected and snippets can be stored in git repo
-    let g:UltiSnipsSnippetsDir = $HOME.'/dotfiles/vim/Ultisnips'
+    let g:UltiSnipsSnippetDirectories=[$HOME.'/dotfiles/vim/UltiSnips']
+    let g:UltiSnipsSnippetsDir=$HOME.'/dotfiles/vim/UltiSnips'
 " }}}
 " vim:foldmethod=marker:foldlevel=0

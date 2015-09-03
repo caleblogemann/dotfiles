@@ -71,6 +71,7 @@
 
     " quit buffer
     nnoremap <leader>q :q<CR>
+    nnoremap <leader>fq :q!<CR>
 
     " reload file
     nnoremap <leader>e :e<CR>
