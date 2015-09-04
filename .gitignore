@@ -1,5 +1,5 @@
 .DS_Store
-.zhistory
+zsh_history
 .zcompdump
 .zcompdump.zwc
 vim/.vim/tmp/
