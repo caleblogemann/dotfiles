@@ -7,18 +7,19 @@
 " use the command :PluginInstall to install
 " to add a plugin use command "Plugin github/repo"
 
-"required for Vundle to run - may be turned back on afterwards
-filetype off 
-
 " if vundle is not installed clone it
+let vundleInstalled=0
 if !isdirectory(expand("~/.vim/bundle/Vundle.vim/.git"))
     !git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    let vundleInstalled=1
 endif
 
 " include vundle in run time path
 set runtimepath+=~/.vim/bundle/Vundle.vim
 
 " vundle configuration {{{
+"required for Vundle to run - may be turned back on afterwards
+filetype off 
 call vundle#begin()
 
     " Let vundle manage itself
@@ -43,7 +44,7 @@ call vundle#begin()
     "Plugin 'nathanaelkane/vim-indent-guides'
 
     " Snippets
-    "Plugin 'SirVer/ultisnips'
+    Plugin 'SirVer/ultisnips'
 
     " Snippet Repository
     "Plugin 'honza/vim-snippets'
@@ -52,7 +53,7 @@ call vundle#begin()
     "Plugin 'Valloric/YouCompleteMe'
 
     " Matlab
-    "Plugin 'MatlabFilesEdition'
+    Plugin 'MatlabFilesEdition'
 
     " ColorSchemes {{{
     """""""""""""""""""""""""""""""""""""""""
@@ -78,10 +79,12 @@ call vundle#begin()
     Plugin 'flazz/vim-colorschemes'
     " }}}
     call vundle#end()
+    filetype plugin indent on
     " }}}
 
-" turn on filetype and plugins
-filetype plugin indent on
+if vundleInstalled
+    PluginInstall
+endif
 
 " set colorscheme from list of configured colorschemes
 colorscheme solarized
@@ -108,5 +111,10 @@ colorscheme solarized
     " If you want :UltiSnipsEdit to split your window.
     let g:UltiSnipsEditSplit="vertical"
     nnoremap <leader>s :UltiSnipsEdit<CR>
+
+    " Added ~/dotfiles/vim to runtimepath so that Ultisnips directory
+    " can be detected and snippets can be stored in git repo
+    let g:UltiSnipsSnippetDirectories=[$HOME.'/dotfiles/vim/UltiSnips']
+    let g:UltiSnipsSnippetsDir=$HOME.'/dotfiles/vim/UltiSnips'
 " }}}
 " vim:foldmethod=marker:foldlevel=0

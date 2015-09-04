@@ -1,0 +1,10 @@
+################################################################################
+# ZSHENV - Caleb Logemann
+################################################################################
+
+# set Path environment variable
+PATH=~/dotfiles/homebrew/localInstall/bin:$PATH
+PATH=~/dotfiles/bin:$PATH
+export PATH
+
+export HOMEBREW_CASK_OPTS='--caskroom=~/dotfiles/homebrew/Caskroom'

@@ -1,0 +1,7 @@
+[push]
+    default = simple
+[user]
+    name = Caleb Logemann
+    email = logemann@iastate.edu
+[core]
+    excludesfile = ~/dotfiles/git/.gitignore
