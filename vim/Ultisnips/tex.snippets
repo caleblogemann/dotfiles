@@ -61,6 +61,10 @@ snippet fig "figure" b
 \end{figure}$0
 endsnippet
 
+snippet inc "include graphics" b
+\includegraphics[scale=$1]{Figures/$2}
+endsnippet
+
 snippet frame "Beamer Frame" b
 \begin{frame}
     \frametitle{$1}
@@ -108,10 +112,10 @@ endsnippet
 # Mathematics
 ################################################################################
 
-snippet fr "fraction"
+snippet fr "fraction" i
 \frac{$1}{$2}$0
 endsnippet
 
-snippet $fr "fraction"
-$\frac{$1}{$2}$0
+snippet dintt "Definite integral with respect" i
+\dintt{$1}{$2}{$3}{$4}$0
 endsnippet

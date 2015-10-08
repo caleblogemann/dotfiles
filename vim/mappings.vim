@@ -76,6 +76,9 @@
     " reload file
     nnoremap <leader>e :e<CR>
 
+    " reprocess syntax fromstart
+    nnoremap <leader>ss :syntax sync fromstart<CR>
+
     " remap space to open/close fold
     nnoremap <space> za
 
@@ -83,7 +86,7 @@
     nnoremap <leader><space> :nohlsearch<CR>
 
     " copy line and paste below
-    nnoremap <leader>p yyp
+    nnoremap <leader>j yyp
 
     " detect filetype apply syntax
     nnoremap <leader>ft :filetype detect<CR>
@@ -91,12 +94,15 @@
     " enable spellcheck
     nnoremap <leader>sc :setlocal spell spelllang=en_us<CR>
 
+    " paste in normal mode
+    nnoremap <leader>p "*p
+
     " LaTeX Mappings {{{
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " build tex document
-    nnoremap <leader>b :!latexmk -pdf %<CR>
+    nnoremap <leader>b :!latexmk -pdf -outdir=%:p:h %<CR>
     " force build
-    nnoremap <leader>fb :!latexmk -pdf -f %<CR>
+    nnoremap <leader>fb :!latexmk -pdf -f -outdir=%:p:h %<CR>
 
     " open pdf document
     nnoremap <leader>o :!open "%:r".pdf<CR>
@@ -127,6 +133,6 @@
     vnoremap <esc> <nop>
 
     " copy to clipboard
-    vnoremap <leader>c "+y
+    vnoremap <leader>c "*y
 " }}}
 " vim:foldmethod=marker:foldlevel=0
