@@ -48,10 +48,19 @@
             alias gotoPst='gotoUndergradGenEd > /dev/null; cd PstIntercultural'
             alias gotoSTAT542='gotoGradStats > /dev/null; cd STAT542ProbabilityStatisticsI'
             alias gotoMATH140='gotoGradTeaching > /dev/null; cd MATH140CollegeAlgebra'
+            alias gotoMATH201='gotoGradTeaching > /dev/null; cd MATH201IntroductionToProof'
             alias gotoMATH519='gotoGradMath > /dev/null; cd MATH519MethodsAppliedMathI'
             alias gotoMATH561='gotoGradMath > /dev/null; cd MATH561NumericalAnalysisI'
             alias gotoMATH591='gotoGradMath > /dev/null; cd MATH591OrientationSeminarI'
             alias gotoMATH507='gotoGradMath > /dev/null; cd MATH507AppliedLinearAlgebra'
+
+        # Current Classes
+            alias Linear='gotoMATH507'
+            alias Stats='gotoSTAT542'
+            alias Orientation='gotoMATH591'
+            alias Numerical='gotoMATH561'
+            alias Proof='gotoMATH201'
+            alias CollegeAlgebra='gotoMATH140'
 
 #################################################
 # Maven Aliases                                 #
