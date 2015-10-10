@@ -54,6 +54,9 @@
 
     " enable syntax processing
     syntax enable    
+    " syntax processes entire file
+    " stops folding from messing up syntax
+    syntax sync fromstart
 
     " highlight all matches of last search
     set hlsearch
@@ -225,6 +228,7 @@
     " entering and exiting files
     autocmd BufWinLeave,BufWrite *.* mkview
     autocmd BufWinEnter *.* silent loadview
+    autocmd BufWinEnter syn sync fromstart
 " }}}
 
 " Plugins
