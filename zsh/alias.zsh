@@ -91,7 +91,7 @@
     alias sftpIASTATE='sftp sftp.iastate.edu'
     alias showHiddenFiles='defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder'
     alias hideHiddenFiles='defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder'
-    alias encryptLogin='openssl des3 -salt -out Logins.x -in Logins.txt; rm Logins.txt;'
+    alias encryptLogin='openssl des3 -salt -out Logins.x -in Logins.txt;'
     alias decryptLogin='openssl des3 -salt -d -in Logins.x -out Logins.txt'
     alias l='ls -al'
     alias mmv='noglob zmv -W'
