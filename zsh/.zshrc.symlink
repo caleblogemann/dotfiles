@@ -80,10 +80,14 @@
 
     setopt AUTO_CD
 
+    # print contents of directory after cd command
     function chpwd() {
         emulate -L zsh
         ls -a -l
     }
+
+    # load better mv function
+    autoload -U zmv
 ################################################################################
 # Color Settings
 ################################################################################
