@@ -26,7 +26,7 @@ alias gfm='git pull'
 alias gp='git push'
 
 ########################################
-# init aliases
+# init aliases (i)
 ########################################
 # init git repo
 alias gi='git init'
@@ -36,10 +36,10 @@ alias gi='git init'
 alias gib='git init --bare'
 
 ########################################
-# add aliases
+# add aliases (a)
 ########################################
 # git add to index
-alias gia='git add'
+alias ga='git add'
 
 ########################################
 # remote aliases (R)
@@ -51,3 +51,9 @@ alias gRl='git remote --verbose'
 
 # add url to specified remote
 alias gRsu='git remote set-url --add'
+
+########################################
+# log aliases (l)
+########################################
+
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
