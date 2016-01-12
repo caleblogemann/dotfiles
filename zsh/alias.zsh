@@ -48,19 +48,25 @@
             alias gotoPst='gotoUndergradGenEd > /dev/null; cd PstIntercultural'
             alias gotoSTAT542='gotoGradStats > /dev/null; cd STAT542ProbabilityStatisticsI'
             alias gotoMATH140='gotoGradTeaching > /dev/null; cd MATH140CollegeAlgebra'
+            alias gotoMATH150='gotoGradTeaching > /dev/null; cd MATH150DiscreteMath'
+            alias gotoMATH165='gotoGradTeaching > /dev/null; cd MATH165CalculusI'
             alias gotoMATH201='gotoGradTeaching > /dev/null; cd MATH201IntroductionToProof'
+            alias gotoMATH507='gotoGradMath > /dev/null; cd MATH507AppliedLinearAlgebra'
+            alias gotoMATH517='gotoGradMath > /dev/null; cd MATH517FiniteDifferenceMethods'
             alias gotoMATH519='gotoGradMath > /dev/null; cd MATH519MethodsAppliedMathI'
             alias gotoMATH561='gotoGradMath > /dev/null; cd MATH561NumericalAnalysisI'
+            alias gotoMATH562='gotoGradMath > /dev/null; cd MATH562NumericalAnalysisII'
             alias gotoMATH591='gotoGradMath > /dev/null; cd MATH591OrientationSeminarI'
-            alias gotoMATH507='gotoGradMath > /dev/null; cd MATH507AppliedLinearAlgebra'
+            alias gotoMATH592='gotoGradMath > /dev/null; cd MATH592OrientationSeminarII'
+            alias gotoMATH610='gotoGradMath > /dev/null; cd MATH610EarlyGraduateResearch'
 
         # Current Classes
-            alias Linear='gotoMATH507'
-            alias Stats='gotoSTAT542'
-            alias Orientation='gotoMATH591'
-            alias Numerical='gotoMATH561'
-            alias Proof='gotoMATH201'
-            alias CollegeAlgebra='gotoMATH140'
+            alias Orientation='gotoMATH592'
+            alias Numerical='gotoMATH562'
+            alias Finite='gotoMATH517'
+            alias EGR='gotoMATH610'
+            alias Calc1='gotoMATH165'
+            alias Discrete='gotoMATH150'
 
 #################################################
 # Maven Aliases                                 #
@@ -85,13 +91,13 @@
     alias sftpIASTATE='sftp sftp.iastate.edu'
     alias showHiddenFiles='defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder'
     alias hideHiddenFiles='defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder'
-    alias encryptLogin='openssl des3 -salt -out Logins.x -in Logins.txt; rm Logins.txt;'
+    alias encryptLogin='openssl des3 -salt -out Logins.x -in Logins.txt;'
     alias decryptLogin='openssl des3 -salt -d -in Logins.x -out Logins.txt'
     alias l='ls -al'
+    alias mmv='noglob zmv -W'
 
 #################################################
 # Latex                                         #
 #################################################
     setopt null_glob # set null_glob so that rm still runs if pattern is not matched
-    alias rmLatex='rm *.aux(N) *.log(N) *.fls(N) *.fdb_latexmk(N) *.bbl(N)
-        *.blg(N) *.lof(N) *.lot(N) *.toc(N) *.bcf(N) *.run.xml(N) *.nav(N) *.out(N) *.snm(N)'
+    alias rmLatex='rm *.aux(N) *.log(N) *.fls(N) *.fdb_latexmk(N) *.bbl(N) *.blg(N) *.lof(N) *.lot(N) *.toc(N) *.bcf(N) *.run.xml(N) *.nav(N) *.out(N) *.snm(N)'

@@ -117,4 +117,5 @@ colorscheme solarized
     let g:UltiSnipsSnippetDirectories=[$HOME.'/dotfiles/vim/UltiSnips']
     let g:UltiSnipsSnippetsDir=$HOME.'/dotfiles/vim/UltiSnips'
 " }}}
+" 
 " vim:foldmethod=marker:foldlevel=0
