@@ -108,6 +108,10 @@ snippet subs* "Subsubsection nonnumbered" b
 \subsubsection*{$1}$0
 endsnippet
 
+snippet it "intertext" b
+\intertext{$1}$0
+endsnippet
+
 ################################################################################
 # Mathematics
 ################################################################################
@@ -118,4 +122,24 @@ endsnippet
 
 snippet dintt "Definite integral with respect" i
 \dintt{$1}{$2}{$3}{$4}$0
+endsnippet
+
+snippet dint "Definite integral" i
+\dintt{$1}{$2}{$3}$0
+endsnippet
+
+snippet iint "Indefinite integral" i
+\int{$1}$0
+endsnippet
+
+snippet iintt "Indefinite integral with respect" i
+\intt{$1}{$2}$0
+endsnippet
+
+snippet sumt "Sum with bounds" i
+\sum{$1}{$2}{$3}$0
+endsnippet
+
+snippet prodt "Product with bounds" i
+\prod{$1}{$2}{$3}$0
 endsnippet
