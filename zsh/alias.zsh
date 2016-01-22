@@ -51,6 +51,7 @@
             alias gotoMATH150='gotoGradTeaching > /dev/null; cd MATH150DiscreteMath'
             alias gotoMATH165='gotoGradTeaching > /dev/null; cd MATH165CalculusI'
             alias gotoMATH201='gotoGradTeaching > /dev/null; cd MATH201IntroductionToProof'
+            alias gotoMATH385='gotoGradMath > /dev/null; cd MATH385PartialDifferentialEquations'
             alias gotoMATH507='gotoGradMath > /dev/null; cd MATH507AppliedLinearAlgebra'
             alias gotoMATH517='gotoGradMath > /dev/null; cd MATH517FiniteDifferenceMethods'
             alias gotoMATH519='gotoGradMath > /dev/null; cd MATH519MethodsAppliedMathI'
@@ -67,6 +68,7 @@
             alias EGR='gotoMATH610'
             alias Calc1='gotoMATH165'
             alias Discrete='gotoMATH150'
+            alias PDE='gotoMATH385'
 
 #################################################
 # Maven Aliases                                 #
