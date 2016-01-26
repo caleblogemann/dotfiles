@@ -100,9 +100,9 @@
     " LaTeX Mappings {{{
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " build tex document
-    nnoremap <leader>b :!latexmk -pdf -outdir=%:p:h %<CR>
+    nnoremap <leader>b :!latexmk -pdf -outdir="%:p:h" "%"<CR>
     " force build
-    nnoremap <leader>fb :!latexmk -pdf -f -outdir=%:p:h %<CR>
+    nnoremap <leader>fb :!latexmk -pdf -f -outdir="%:p:h" "%"<CR>
 
     " open pdf document
     nnoremap <leader>o :!open "%:r".pdf<CR>
