@@ -26,6 +26,12 @@ alias gfm='git pull'
 alias gp='git push'
 
 ########################################
+# checkout alias
+########################################
+# git checkout
+alias gco='git checkout'
+
+########################################
 # init aliases (i)
 ########################################
 # init git repo
@@ -55,5 +61,4 @@ alias gRsu='git remote set-url --add'
 ########################################
 # log aliases (l)
 ########################################
-
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
