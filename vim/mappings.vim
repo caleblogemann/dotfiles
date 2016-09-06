@@ -63,6 +63,9 @@
     " surround current word with single quotes
     nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 
+    " change working directory to directory of current file
+    nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+
     " goto column 80
     nnoremap <leader>f 80\|
 
