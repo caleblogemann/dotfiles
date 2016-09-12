@@ -71,6 +71,7 @@
 
     " save buffer
     nnoremap <leader>w :w<CR>
+    nnoremap <leader>fw :w!<CR>
 
     " quit buffer
     nnoremap <leader>q :q<CR>
