@@ -85,8 +85,11 @@
     " remap space to open/close fold
     nnoremap <space> za
 
+    " remap <space><space> to redo and close all folds
+    nnoremap <leader><space> zxzM
+
     " keymap to turn off search highlighting
-    nnoremap <leader><space> :nohlsearch<CR>
+    nnoremap <leader>nh :nohlsearch<CR>
 
     " copy line and paste below
     nnoremap <leader>j yyp
