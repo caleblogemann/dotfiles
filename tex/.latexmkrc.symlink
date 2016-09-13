@@ -1,0 +1,13 @@
+# LATEXMKRC file
+
+# fixes issue of sagetex.sage extension
+$latex = "$latex ; python /Users/logemann/Documents/MyProjects/TeX/texmf/tex/latex/sagetex/run-sagetex-if-necessary.py %B";
+$pdflatex = "$pdflatex ; python /Users/logemann/Documents/MyProjects/TeX/texmf/tex/latex/sagetex/run-sagetex-if-necessary.py %B";
+
+# runs sage for sagetex package
+add_cus_dep('sagetex.sage', 'sagetex.sout', 0, 'makesout');
+$hash_calc_ignore_pattern{'sage'} = '^( _st_.goboom| ?_st_.current_tex_line|print .SageT)';
+sub makesout {
+        system("sage '$_[0].sagetex.sage'");
+}
+
