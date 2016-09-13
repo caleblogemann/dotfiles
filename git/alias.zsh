@@ -9,7 +9,7 @@ alias g='git'
 # git add to index
 alias ga='git add'
 # git add all
-alias gaa='git add -all'
+alias gaa='git add --all'
 
 ########################################
 # commit aliases (c)                   #
