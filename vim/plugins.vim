@@ -55,6 +55,9 @@ call vundle#begin()
     " Matlab
     Plugin 'MatlabFilesEdition'
 
+    " Sage
+    Plugin 'petrushka/vim-sage'
+
     " ColorSchemes {{{
     """""""""""""""""""""""""""""""""""""""""
     " Solarized
