@@ -4,7 +4,6 @@
 
 # set Path environment variable
 PATH=/usr/local/texlive/2015/bin/x86_64-darwin:$PATH
-PATH=~/dotfiles/homebrew/localInstall/bin:$PATH
 PATH=~/dotfiles/bin:$PATH
 export PATH
 
