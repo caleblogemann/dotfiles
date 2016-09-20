@@ -32,19 +32,23 @@ call vundle#begin()
     Plugin 'airblade/vim-gitgutter'
 
     " NerdTree
-    "Plugin 'scrooloose/nerdtree'
+    Plugin 'scrooloose/nerdtree'
 
     " NERD Commenter
-    "Plugin 'scrooloose/nerdcommenter'
+    Plugin 'scrooloose/nerdcommenter'
 
-    " Gundo - accesses vim's undo tree
-    Plugin 'sjl/gundo.vim'
+    " CtrlP file search
+    Plugin 'ctrlpvim/ctrlp.vim'
 
     " Airline - status line
     Plugin 'bling/vim-airline'
+    
+    " Tagbar shows tags in vertical bar on right
+    " requires exuberant ctags
+    Plugin 'majutsushi/tagbar'
 
-    " Indent Guides
-    "Plugin 'nathanaelkane/vim-indent-guides'
+    " EasyMotion
+    Plugin 'easymotion/vim-easymotion'
 
     " Snippets
     Plugin 'SirVer/ultisnips'
@@ -52,14 +56,20 @@ call vundle#begin()
     " Snippet Repository
     "Plugin 'honza/vim-snippets'
 
-    " Completions
+    " Completions - Requires difficult installation
     "Plugin 'Valloric/YouCompleteMe'
+
+    " Gundo - accesses vim's undo tree
+    Plugin 'sjl/gundo.vim'
 
     " Matlab
     Plugin 'MatlabFilesEdition'
 
     " Sage
     "Plugin 'petrushka/vim-sage'
+"
+    " Indent Guides
+    "Plugin 'nathanaelkane/vim-indent-guides'
 
     " ColorSchemes {{{
     """""""""""""""""""""""""""""""""""""""""
@@ -95,17 +105,23 @@ endif
 " set colorscheme from list of configured colorschemes
 colorscheme solarized
 
+" Fugitive Settings {{{
+" }}}
+" NERDTree Settings {{{
+    nnoremap <leader>p :NERDT
+" }}}
+" CtrlP Settings {{{
+" }}}
 " Airline Settings {{{
     " show all buffers when only one tab
     let g:airline#extensions#tabline#enabled = 1
     " use powerline fonts
     let g:airline_powerline_fonts = 1
 " }}}
-" Gundo Settings {{{
-    nnoremap <leader>u :GundoToggle<CR>         
+" Tagbar Settings {{{
+    nmap <leader>t :TagbarToggle<CR>
 " }}}
-" NERDTree Settings {{{
-    nnoremap <leader>p :NERDT
+" EasyMotion Settings {{{
 " }}}
 " Ultisnips Settings {{{
     " Trigger configuration. Do not use <tab> if you use
@@ -122,6 +138,9 @@ colorscheme solarized
     " can be detected and snippets can be stored in git repo
     let g:UltiSnipsSnippetDirectories=[$HOME.'/dotfiles/vim/UltiSnips']
     let g:UltiSnipsSnippetsDir=$HOME.'/dotfiles/vim/UltiSnips'
+" }}}
+" Gundo Settings {{{
+    nnoremap <leader>u :GundoToggle<CR>         
 " }}}
 " 
 " vim:foldmethod=marker:foldlevel=0
