@@ -1,0 +1,2 @@
+--regex-tex=/\\label[ \t]*\*?\{[ \t]*([^}]*)\}/\1/l,label/
+--regex-tex=/\\item(.*)/\1/i,item/

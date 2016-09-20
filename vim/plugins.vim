@@ -108,7 +108,7 @@ colorscheme solarized
 " Fugitive Settings {{{
 " }}}
 " NERDTree Settings {{{
-    nnoremap <leader>p :NERDT
+    nnoremap <leader>nt :NERDT
 " }}}
 " CtrlP Settings {{{
 " }}}
@@ -119,7 +119,22 @@ colorscheme solarized
     let g:airline_powerline_fonts = 1
 " }}}
 " Tagbar Settings {{{
+    let g:tagbar_width = 30
     nmap <leader>t :TagbarToggle<CR>
+
+    let g:tagbar_type_tex = {
+        \ 'kinds' : [
+            \ 'p:parts',
+            \ 'c:chapters',
+            \ 's:sections',
+            \ 'u:subsections',
+            \ 'b:subsubsections',
+            \ 'P:paragraphs:1:0',
+            \ 'G:subparagraphs:1:0',
+            \ 'l:labels:0:0',
+            \ 'i:items:1:0',
+        \ ],
+    \ }
 " }}}
 " EasyMotion Settings {{{
 " }}}
