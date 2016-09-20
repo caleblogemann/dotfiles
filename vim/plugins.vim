@@ -26,7 +26,10 @@ call vundle#begin()
     Plugin 'gmarik/Vundle.vim'
 
     " Fugitive - Git Wrapper
-    "Plugin 'tpope/vim-fugitive'
+    Plugin 'tpope/vim-fugitive'
+
+    " vim-gitgutter shows signs for added, changed and removed lines
+    Plugin 'airblade/vim-gitgutter'
 
     " NerdTree
     "Plugin 'scrooloose/nerdtree'
@@ -56,7 +59,7 @@ call vundle#begin()
     Plugin 'MatlabFilesEdition'
 
     " Sage
-    Plugin 'petrushka/vim-sage'
+    "Plugin 'petrushka/vim-sage'
 
     " ColorSchemes {{{
     """""""""""""""""""""""""""""""""""""""""
