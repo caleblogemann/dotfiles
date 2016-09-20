@@ -16,6 +16,11 @@
 *.snm
 *.bcf
 *.run.xml
+# sagetex files
+*.sagetex.sage
+*.sagetex.sage.py
+*.sagetex.scmd
+*.sagetex.sout
 
 # java 
 *.class
