@@ -66,8 +66,8 @@ call vundle#begin()
     Plugin 'MatlabFilesEdition'
 
     " Sage
-    "Plugin 'petrushka/vim-sage'
-"
+    Plugin 'petrushka/vim-sage'
+
     " Indent Guides
     "Plugin 'nathanaelkane/vim-indent-guides'
 
