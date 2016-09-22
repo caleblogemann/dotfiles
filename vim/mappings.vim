@@ -4,21 +4,24 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Insert Mode Mappings {{{
-
     " mappings to esc key to enter normal/command mode
     inoremap jk <esc>
     inoremap <esc> <nop>
 
     " new line
     "inoremap <leader>n <esc>80\|gea<CR><esc>$a
-
 " End of Insert Mode Mappings }}}
 " Normal Mode Mappings {{{
+    " save buffer
+    nnoremap <leader>w :w<CR>
+    nnoremap <leader>fw :w!<CR>
 
-    " map - key to move line down 1 line
-    nnoremap - ddp
-    " map _ key to move line up 1 line
-    nnoremap _ dd2kp
+    " quit buffer
+    nnoremap <leader>q :q<CR>
+    nnoremap <leader>fq :q!<CR>
+
+    " reload file
+    nnoremap <leader>e :e<CR>
 
     " open vimrc
     nnoremap <leader>ev :vsplit $MYVIMRC<CR>
@@ -57,43 +60,14 @@
     " visually highlight text from last insert
     nnoremap gV '['v']
 
-    " surround current word with double quotes
-    nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
-    
-    " surround current word with single quotes
-    nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
-
-    " change working directory to directory of current file
-    nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
-
     " goto column 80
     nnoremap <leader>f 80\|
 
-    " save buffer
-    nnoremap <leader>w :w<CR>
-    nnoremap <leader>fw :w!<CR>
-
-    " quit buffer
-    nnoremap <leader>q :q<CR>
-    nnoremap <leader>fq :q!<CR>
-
-    " reload file
-    nnoremap <leader>e :e<CR>
-
-    " reprocess syntax fromstart
-    nnoremap <leader>ss :syntax sync fromstart<CR>
-
-    " remap space to open/close fold
-    nnoremap <space> za
-
-    " remap <space><space> to redo and close all folds
-    nnoremap <leader><space> zxzM
-
-    " keymap to turn off search highlighting
-    nnoremap <leader>nh :nohlsearch<CR>
-
     " copy line and paste below
     nnoremap <leader>j yyp
+
+    " paste in normal mode
+    nnoremap <leader>p "*p
 
     " detect filetype apply syntax
     nnoremap <leader>ft :filetype detect<CR>
@@ -101,8 +75,21 @@
     " enable spellcheck
     nnoremap <leader>sc :setlocal spell spelllang=en_us<CR>
 
-    " paste in normal mode
-    nnoremap <leader>p "*p
+    " change working directory to directory of current file
+    nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+
+    " reprocess syntax fromstart
+    nnoremap <leader>ss :syntax sync fromstart<CR>
+
+    " keymap to turn off search highlighting
+    nnoremap <leader>nh :nohlsearch<CR>
+
+    " Folding mappings {{{
+        " remap space to open/close fold
+        nnoremap <leader>z za
+        " remap <space><space> to redo and close all folds
+        nnoremap <leader>fz zxzM
+    " }}}
 
     " LaTeX Mappings {{{
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -113,8 +100,6 @@
 
     " open pdf document
     nnoremap <leader>o :!open "%:r".pdf<CR>
-    " delete latex files
-    nnoremap <leader>rl :!rmLatex<CR>
     " End of Latex Mappings }}}
 
 " End of Normal Mode Mappings }}}

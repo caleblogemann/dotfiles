@@ -106,6 +106,11 @@ endif
 colorscheme solarized
 
 " Fugitive Settings {{{
+    nnoremap <leader>gs :Gstatus
+    nnoremap <leader>gd :Gdiff
+    nnoremap <leader>gp :Gpush
+    nnoremap <leader>gfm :Gpull
+    nnoremap <leader>gl :Glog
 " }}}
 " NERDTree Settings {{{
     nnoremap <leader>nt :NERDT
