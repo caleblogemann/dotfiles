@@ -20,7 +20,10 @@
 
     # personal projects
         alias gotoMyProjects='gotoDocuments > /dev/null; cd MyProjects'
+        alias gotoTeXPackages='gotoMyProjects > /dev/null; cd TeX/texmf/tex/latex'
+        alias tPackages='gotoTeXPackages'
         alias gotoDotfiles='gotoHome > /dev/null; cd dotfiles'
+        alias dotfiles='gotoDotfiles'
 
     # School movement aliases
         alias gotoEducation='gotoDocuments > /dev/null; cd Education'
