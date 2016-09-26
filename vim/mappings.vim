@@ -69,6 +69,9 @@
     " paste in normal mode
     nnoremap <leader>p "*p
 
+    " run make
+    nnoremap <leader>m :make<CR>
+
     " detect filetype apply syntax
     nnoremap <leader>ft :filetype detect<CR>
 
@@ -94,12 +97,12 @@
     " LaTeX Mappings {{{
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " build tex document
-    nnoremap <leader>b :!latexmk -pdf -outdir="%:p:h" "%"<CR>
+"    nnoremap <leader>b :!latexmk -pdf -outdir="%:p:h" "%"<CR>
     " force build
-    nnoremap <leader>fb :!latexmk -pdf -f -outdir="%:p:h" "%"<CR>
+"    nnoremap <leader>fb :!latexmk -pdf -f -outdir="%:p:h" "%"<CR>
 
     " open pdf document
-    nnoremap <leader>o :!open "%:r".pdf<CR>
+    "nnoremap <leader>o :!open "%:r".pdf<CR>
     " End of Latex Mappings }}}
 
 " End of Normal Mode Mappings }}}
