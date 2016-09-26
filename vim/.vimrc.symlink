@@ -216,9 +216,12 @@
 " }}}
 
 " Leader Assignments {{{
-    " map leader key to space by show "\" in showcmd
+    " map leader key to space but show "\" in showcmd
+    nnoremap <space> <nop>
     let mapleader="\\"
-    map <space> \
+    map <space> <leader>
+    map <space><space> <leader><leader>
+
 
     " map local leader key, leader key for filetype specific mappings
     let maplocalleader=","
