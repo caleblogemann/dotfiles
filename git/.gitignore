@@ -22,6 +22,9 @@
 *.sagetex.scmd
 *.sagetex.sout
 
+# vim
+*.swp
+
 # java 
 *.class
 
