@@ -111,7 +111,7 @@ colorscheme solarized
     nnoremap <leader>gp :Gpush<CR>
     nnoremap <leader>gfm :Gpull<CR>
     nnoremap <leader>gl :Glog<CR>
-    nnoremap <leader>gc :GCommit<CR>
+    nnoremap <leader>gc :Gcommit<CR>
 " }}}
 " NERDTree Settings {{{
     nnoremap <leader>nt :NERDT
