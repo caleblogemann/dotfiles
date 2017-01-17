@@ -12,3 +12,4 @@ iabbrev Theroem Theorem
 iabbrev Reimann Riemann
 iabbrev teh the
 iabbrev whcih which
+iabbrev lienar linear
