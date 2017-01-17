@@ -13,3 +13,4 @@ iabbrev Reimann Riemann
 iabbrev teh the
 iabbrev whcih which
 iabbrev lienar linear
+iabbrev adn and

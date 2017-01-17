@@ -51,6 +51,7 @@
             alias gotoPst='gotoUndergradGenEd > /dev/null; cd PstIntercultural'
             alias gotoSTAT542='gotoGradStats > /dev/null; cd STAT542ProbabilityStatisticsI'
             alias gotoMATH140='gotoGradTeaching > /dev/null; cd MATH140CollegeAlgebra'
+            alias gotoMATH143='gotoGradTeaching > /dev/null; cd MATH143PreCalculus'
             alias gotoMATH150='gotoGradTeaching > /dev/null; cd MATH150DiscreteMath'
             alias gotoMATH165='gotoGradTeaching > /dev/null; cd MATH165CalculusI'
             alias gotoMATH166='gotoGradTeaching > /dev/null; cd MATH166CalculusII'
@@ -60,9 +61,12 @@
             alias gotoMATH507='gotoGradMath > /dev/null; cd MATH507AppliedLinearAlgebra'
             alias gotoMATH517='gotoGradMath > /dev/null; cd MATH517FiniteDifferenceMethods'
             alias gotoMATH519='gotoGradMath > /dev/null; cd MATH519MethodsAppliedMathI'
+            alias gotoMATH520='gotoGradMath > /dev/null; cd MATH520MethodsAppliedMathII'
             alias gotoMATH561='gotoGradMath > /dev/null; cd MATH561NumericalAnalysisI'
             alias gotoMATH562='gotoGradMath > /dev/null; cd MATH562NumericalAnalysisII'
+            alias gotoMATH565='gotoGradMath > /dev/null; cd MATH565ContinuousOptimization'
             alias gotoMATH566='gotoGradMath > /dev/null; cd MATH566DiscreteOptimization'
+            alias gotoMATH590='gotoGradMath > /dev/null; cd MATH590IndependentStudy'
             alias gotoMATH591='gotoGradMath > /dev/null; cd MATH591OrientationSeminarI'
             alias gotoMATH592='gotoGradMath > /dev/null; cd MATH592OrientationSeminarII'
             alias gotoMATH610='gotoGradMath > /dev/null; cd MATH610EarlyGraduateResearch'
@@ -73,13 +77,16 @@
             alias Orientation='gotoMATH592'
             alias Numerical='gotoNumericalQual'
             alias AppliedQual='gotoAppliedQual'
-            alias Applied='gotoMATH519'
+            alias Applied='gotoMATH520'
             alias Finite='gotoMATH517'
             alias EGR='gotoMATH610'
+            alias Research='gotoMATH590'
+            alias PreCalc='gotoMATH143'
             alias Calc1='gotoMATH165'
             alias Calc2='gotoMATH166'
             alias DiffEQ='gotoMATH267'
             alias Discrete='gotoMATH566'
+            alias Continuous='gotoMATH565'
             alias PDE='gotoMATH385'
 
 #################################################
@@ -97,7 +104,7 @@
 #################################################
 # Misc Aliases                                  #
 #################################################
-    alias vim='mvim -v'
+    alias emacs='emacs -nw'
     alias top='sudo htop'
     alias htop='sudo htop'
     alias restartAudio='sudo killall coreaudiod'
