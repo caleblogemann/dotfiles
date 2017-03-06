@@ -108,8 +108,6 @@
     alias top='sudo htop'
     alias htop='sudo htop'
     alias restartAudio='sudo killall coreaudiod'
-    alias sshWiebe='ssh cdl88254@wiebe.mathcs.bethel.edu'
-    alias sshCluster='ssh cdl88254@cluster-frontend.mathcs.bethel.edu'
     alias sftpIASTATE='sftp sftp.iastate.edu'
     alias showHiddenFiles='defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder'
     alias hideHiddenFiles='defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder'
@@ -117,6 +115,7 @@
     alias decryptLogin='openssl des3 -salt -d -in Logins.x -out Logins.txt'
     alias l='ls -al'
     alias mmv='noglob zmv -W'
+    alias scipy='ipython --pylab'
 
 #################################################
 # Latex                                         #
