@@ -6,7 +6,7 @@
 " Insert Mode Mappings {{{
     " mappings to esc key to enter normal/command mode
     inoremap jk <esc>
-    inoremap <esc> <nop>
+    "inoremap <esc> <nop>
 
     " new line
     "inoremap <leader>n <esc>80\|gea<CR><esc>$a
