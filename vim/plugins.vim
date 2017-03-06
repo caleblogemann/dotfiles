@@ -41,8 +41,9 @@ call vundle#begin()
     Plugin 'ctrlpvim/ctrlp.vim'
 
     " Airline - status line
-    Plugin 'bling/vim-airline'
-    
+    Plugin 'vim-airline/vim-airline'
+    Plugin 'vim-airline/vim-airline-themes'
+
     " Tagbar shows tags in vertical bar on right
     " requires exuberant ctags
     Plugin 'majutsushi/tagbar'
