@@ -14,3 +14,4 @@ iabbrev teh the
 iabbrev whcih which
 iabbrev lienar linear
 iabbrev adn and
+iabbrev lamdba lambda
