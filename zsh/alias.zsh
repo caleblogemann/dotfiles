@@ -71,8 +71,10 @@
             alias gotoMATH610='gotoGradCourses > /dev/null; cd MATH610EarlyGraduateResearch'
             alias gotoNumericalQual='gotoGradCourses > /dev/null; cd NumericalQual'
             alias gotoAppliedQual='gotoGradCourses > /dev/null; cd AppliedQual'
+            alias gotoDogpack='gotoGradCourses > /dev/null; cd dogpack-developer'
 
         # Current Classes
+            alias Dogpack='gotoDogpack'
             alias Orientation='gotoMATH592'
             alias Numerical='gotoNumericalQual'
             alias AppliedQual='gotoAppliedQual'
@@ -115,6 +117,7 @@
     alias l='ls -al'
     alias mmv='noglob zmv -W'
     alias scipy='ipython --pylab'
+    alias plotdog1='python $DOGPACK/viz/python/plotdog1.py'
 
 #################################################
 # Latex                                         #

@@ -8,7 +8,9 @@ PATH=~/dotfiles/bin:$PATH
 PATH=/Users/logemann/Library/Python/2.7/bin:$PATH
 export PATH
 
-export CLAW=~/Documents/Education/Graduate/Mathematics/MATH590IndependentStudy/claw
-export sphereCLAW=~/Documents/Education/Graduate/Mathematics/MATH590IndependentStudy/sphereCLAW
+export CLAW=~/Documents/Education/Graduate/Courses/MATH590IndependentStudy/claw
+export sphereCLAW=~/Documents/Education/Graduate/Courses/MATH590IndependentStudy/sphereCLAW
 
 export HOMEBREW_CASK_OPTS='--caskroom=~/dotfiles/homebrew/Caskroom'
+
+export DOGPACK=~/Documents/Education/Graduate/Courses/dogpack-developer
