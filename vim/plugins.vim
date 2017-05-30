@@ -44,6 +44,9 @@ call vundle#begin()
     Plugin 'vim-airline/vim-airline'
     Plugin 'vim-airline/vim-airline-themes'
 
+    " Surround
+    Plugin 'tpope/vim-surround'
+
     " Tagbar shows tags in vertical bar on right
     " requires exuberant ctags
     Plugin 'majutsushi/tagbar'
@@ -68,6 +71,9 @@ call vundle#begin()
 
     " Sage
     Plugin 'petrushka/vim-sage'
+
+    " Hardtime - habit breaking
+    Plugin 'takac/vim-hardtime'
 
     " Indent Guides
     "Plugin 'nathanaelkane/vim-indent-guides'
@@ -115,7 +121,8 @@ colorscheme solarized
     nnoremap <leader>gc :Gcommit<CR>
 " }}}
 " NERDTree Settings {{{
-    nnoremap <leader>nt :NERDT
+    nnoremap <leader>nt :NERDTree<CR>
+    nnoremap <leader>ntq :NERDTreeClose<CR>
 " }}}
 " CtrlP Settings {{{
 " }}}
@@ -162,7 +169,15 @@ colorscheme solarized
     let g:UltiSnipsSnippetsDir=$HOME.'/dotfiles/vim/UltiSnips'
 " }}}
 " Gundo Settings {{{
-    nnoremap <leader>u :GundoToggle<CR>         
+    nnoremap <leader>u :GundoToggle<CR>
+" }}}
+" vim-hardtime Settings {{{
+    let g:hardtime_default_on = 1
+    let g:list_of_normal_keys = ["h", "j", "k", "l", "-", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+    let g:list_of_visual_keys = ["h", "j", "k", "l", "-", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+    let g:list_of_insert_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+    let g:list_of_disabled_keys = []
+    let g:hardtime_maxcount = 3
 " }}}
 " 
 " vim:foldmethod=marker:foldlevel=0
