@@ -65,6 +65,8 @@ alias gp='git push'
 alias gRa='git remote add'
 # list all git remotes
 alias gRl='git remote --verbose'
+# remove/delete git remote
+alias gRx='git remote remove'
 
 # add url to specified remote
 alias gRsu='git remote set-url --add'
