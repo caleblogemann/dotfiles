@@ -1,7 +1,6 @@
 brew
     python
     git
-    wesnoth
     vim
     macvim
     openssl
