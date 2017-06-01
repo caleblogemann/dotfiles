@@ -1,0 +1,23 @@
+# mas installs programs from mac app store
+brew "mas"
+# install Xcode as prerequisite for macvim
+mas "Xcode", id: 497799835 
+
+brew "git"
+brew "macvim", args: ["with-override-system-vim"]
+brew "python"
+brew "python3"
+brew "zsh"
+
+tap caskroom/cask
+cask-args appdir: "~/Applications"
+cask-args caskroom: "~/dotfiles/homebrew/Caskroom"
+cask "iterm2"
+cask "google-chrome"
+cask "google-drive"
+cask "firefox"
+cask "dropbox"
+cask "firefox"
+cask "skim"
+cask "vlc"
+cask "spotify"

@@ -4,3 +4,6 @@
 [submodule "homebrew/localInstall"]
 	path = homebrew/localInstall
 	url = https://github.com/Homebrew/homebrew.git
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot

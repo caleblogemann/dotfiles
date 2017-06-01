@@ -1,0 +1,19 @@
+- defaults:
+    link:
+        relink: true
+        create: true
+
+- clean: ['~']
+
+- link:
+    ~/.zshrc: zsh/zshrc
+    ~/.zshenv: zsh/zshenv
+    ~/.vim: vim
+    ~/.vimrc: vim/vimrc
+    ~/.gitconfig: git/gitconfig
+    ~/.ctags: ctags
+    ~/.latexmkrc: tex/latexmkrc
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [source homebrew/install.sh]
