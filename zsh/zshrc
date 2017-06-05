@@ -23,40 +23,45 @@
     setopt HIST_IGNORE_ALL_DUPS
 
 ################################################################################
-# ZGEN Settings
+# ZPLUG Settings
 ################################################################################
-    # source zgen
-    source $HOME/dotfiles/zsh/zgen/zgen.zsh
-
-    # check if there's no init script
-    if ! zgen saved; then
-        echo "Creating a zgen save"
-
-        #zgen oh-my-zsh
-
-        # plugins
-        #zgen oh-my-zsh plugins/git
-        #zgen oh-my-zsh plugins/sudo
-        #zgen oh-my-zsh plugins/command-not-found
-        zgen load zsh-users/zsh-syntax-highlighting
-        zgen load zsh-users/zsh-history-substring-search
-
-        # change ... to ../..
-        zgen load knu/zsh-manydots-magic
-
-        # directory colors
-#        zgen load joel-porquet/zsh-dircolors-solarized.git
-
-        # completions
-        zgen load zsh-users/zsh-completions src
-
-        # theme
-        zgen load mafredri/zsh-async
-        zgen load sindresorhus/pure
-
-        # save all to init script
-        zgen save
+    ZPLUG_HOME=~/dotfiles/zsh/zplug
+    export ZPLUG_HOME
+    # Check if zplug is installed
+    if [[ ! -d $ZPLUG_HOME ]]; then
+        git clone https://github.com/zplug/zplug $ZPLUG_HOME
+        source $ZPLUG_HOME/init.zsh && zplug update --self
     fi
+
+    # Essential
+    source $ZPLUG_HOME/init.zsh
+  
+    # zsh plugins
+    zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+    zplug "zsh-users/zsh-syntax-highlighting", defer:2
+    zplug "zsh-users/zsh-history-substring-search", defer:3
+    zplug "zsh-users/zsh-completions"
+
+    # oh-my-zsh plugins
+    zplug "plugins/git", from:oh-my-zsh
+
+    # change ... to ../..
+    #zplug "knu/zsh-manydots-magic", use:manydots-magic
+
+    # plugins for theme
+    zplug mafredri/zsh-async, from:github
+    zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
+ 
+    # Install plugins if there are plugins that have not been installed
+    if ! zplug check --verbose; then
+        printf "Install? [y/N]: "
+        if read -q; then
+            echo; zplug install
+        fi
+    fi
+
+    # load plugins
+    zplug load --verbose
 
     # zsh-history-substring-search settings
     zmodload zsh/terminfo
@@ -67,8 +72,8 @@
     bindkey -M vicmd 'j' history-substring-search-down
 
     # load manydots
-    autoload -Uz manydots-magic
-    manydots-magic
+    #autoload -Uz manydots-magic
+    #manydots-magic
 
 ################################################################################
 # Personal Settings
