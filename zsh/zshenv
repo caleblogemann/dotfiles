@@ -3,13 +3,10 @@
 ################################################################################
 
 # set Path environment variable
-PATH=/usr/local/texlive/2015/bin/x86_64-darwin:$PATH
+PATH=/usr/local/texlive/2017/bin/x86_64-darwin:$PATH
 PATH=~/dotfiles/bin:$PATH
 PATH=~/Library/Python/2.7/bin:$PATH
 export PATH
-
-export CLAW=~/Documents/Education/Graduate/Courses/MATH590IndependentStudy/claw
-export sphereCLAW=~/Documents/Education/Graduate/Courses/MATH590IndependentStudy/sphereCLAW
 
 export HOMEBREW_CASK_OPTS='--caskroom=~/dotfiles/homebrew/Caskroom --appdir=~/Applications'
 

@@ -100,7 +100,3 @@
     export CLICOLOR=1;
     export LSCOLORS=exfxcxdxbxegedabagacad
     zstyle ':completion:*:default' list-colors ${(s.:.)LSCOLORS}
-
-# fix homebrew path
-PATH=~/dotfiles/homebrew/localInstall/bin:$PATH
-export PATH
