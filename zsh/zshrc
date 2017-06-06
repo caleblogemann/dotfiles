@@ -61,7 +61,7 @@
     fi
 
     # load plugins
-    zplug load --verbose
+    zplug load
 
     # zsh-history-substring-search settings
     zmodload zsh/terminfo
