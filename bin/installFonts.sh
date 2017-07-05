@@ -1,4 +1,4 @@
-if [ ! -e ~/Library/Fonts/Inconsolata\ for\ Powerline.otf ]; then
+if [ ! -e ~/Library/Fonts/Inconsolata\ for\ Powerline.otf ] || [ ! -e ~/Library/Fonts/InputMono-Black.ttf ]; then
     git clone https://github.com/powerline/fonts.git
     source fonts/install.sh
     rm -rf fonts
