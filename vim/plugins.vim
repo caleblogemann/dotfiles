@@ -58,7 +58,7 @@ call vundle#begin()
     Plugin 'SirVer/ultisnips'
 
     " Snippet Repository
-    "Plugin 'honza/vim-snippets'
+    Plugin 'honza/vim-snippets'
 
     " Completions - Requires difficult installation
     "Plugin 'Valloric/YouCompleteMe'
