@@ -72,8 +72,11 @@
             alias gotoNumericalQual='gotoGradCourses > /dev/null; cd NumericalQual'
             alias gotoAppliedQual='gotoGradCourses > /dev/null; cd AppliedQual'
             alias gotoDogpack='gotoGrad > /dev/null; cd dogpack-developer'
+            alias gotoREU='gotoGradCourses > /dev/null; cd REU2017'
+            alias gotoREUBitbucket='gotoREU > /dev/null; cd isu-summer-reu-modcomp2017'
 
         # Current Classes
+            alias REU='gotoREUBitbucket'
             alias Dogpack='gotoDogpack'
             alias Orientation='gotoMATH592'
             alias Numerical='gotoNumericalQual'
@@ -109,7 +112,6 @@
     alias top='sudo htop'
     alias htop='sudo htop'
     alias restartAudio='sudo killall coreaudiod'
-    alias sftpIASTATE='sftp sftp.iastate.edu'
     alias showHiddenFiles='defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder'
     alias hideHiddenFiles='defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder'
     alias encryptLogin='openssl des3 -salt -out Logins.x -in Logins.txt;'
@@ -118,9 +120,11 @@
     alias mmv='noglob zmv -W'
     alias scipy='ipython --pylab'
     alias plotdog1='python $DOGPACK/viz/python/plotdog1.py'
+    #alias g++='g++-7'
 
 #################################################
 # Latex                                         #
 #################################################
     setopt null_glob # set null_glob so that rm still runs if pattern is not matched
     alias rmLatex='rm *.aux(N) *.log(N) *.fls(N) *.fdb_latexmk(N) *.bbl(N) *.blg(N) *.lof(N) *.lot(N) *.toc(N) *.bcf(N) *.run.xml(N) *.nav(N) *.out(N) *.snm(N) *.sagetex.sage(N) *.sagetex.sage.py(N) *.sagetex.sout(N) *.sagetex.scmd(N)'
+    alias rmPython='rm *.pyc(N)'
