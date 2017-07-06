@@ -54,14 +54,17 @@ call vundle#begin()
     " EasyMotion
     Plugin 'easymotion/vim-easymotion'
 
+    " SuperTab - Allows using tab for YouCompleteMe and Ultisnips
+    Plugin 'ervandew/supertab'
+
+    " Completions - Requires difficult installation
+    Plugin 'Valloric/YouCompleteMe'
+
     " Snippets
     Plugin 'SirVer/ultisnips'
 
     " Snippet Repository
-    "Plugin 'honza/vim-snippets'
-
-    " Completions - Requires difficult installation
-    "Plugin 'Valloric/YouCompleteMe'
+    Plugin 'honza/vim-snippets'
 
     " Gundo - accesses vim's undo tree
     Plugin 'sjl/gundo.vim'
@@ -152,9 +155,17 @@ colorscheme solarized
 " }}}
 " EasyMotion Settings {{{
 " }}}
+" YouCompleteMe Settings {{{
+    let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+    let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+" }}}
+" SuperTab Settings {{{
+    let g:SuperTabDefaultCompletionType = '<C-n>'
+" }}}
 " Ultisnips Settings {{{
     " Trigger configuration. Do not use <tab> if you use
     " https://github.com/Valloric/YouCompleteMe.
+    " If using SuperTab <tab> is okay
     let g:UltiSnipsExpandTrigger="<tab>"
     let g:UltiSnipsJumpForwardTrigger="<tab>"
     let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
