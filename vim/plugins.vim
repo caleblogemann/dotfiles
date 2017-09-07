@@ -77,6 +77,10 @@ call vundle#begin()
 
     " Indent Guides
     "Plugin 'nathanaelkane/vim-indent-guides'
+    "
+    "C++ Plugins
+    " a.vim - switching between header and cpp files
+    Plugin  'a.vim'
 
     " ColorSchemes {{{
     """""""""""""""""""""""""""""""""""""""""
@@ -177,6 +181,9 @@ colorscheme solarized
     let g:list_of_insert_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
     let g:list_of_disabled_keys = []
     let g:hardtime_maxcount = 3
+" }}}
+" a.vim Settings {{{
+    nnoremap <leader>a :A<CR>
 " }}}
 " 
 " vim:foldmethod=marker:foldlevel=0
