@@ -19,3 +19,6 @@
 
     " open pdf document
     nnoremap <leader>o :!open "%:r".pdf<CR>
+
+    " open pdf document at line
+    nnoremap <leader>lo :w<CR>:silent !~/Applications/Skim.app/Contents/SharedSupport/displayline <C-r>=line('.')<CR> %<.pdf<CR>
