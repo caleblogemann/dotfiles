@@ -77,6 +77,18 @@ snippet inc "include graphics" b
 \includegraphics[scale=$1]{Figures/$2}
 endsnippet
 
+snippet lst "Code Listing" b
+\lstinputlisting[language=$1]{$2}
+endsnippet
+
+snippet lstm "MATLAB Code Listing" b
+\lstinputlisting[language=MATLAB]{$1}
+endsnippet
+
+snippet lstp "Python Code Listing" b
+\lstinputlisting[language=Python]{$1}
+endsnippet
+
 snippet frame "Beamer Frame" b
 \begin{frame}
   \frametitle{$1}

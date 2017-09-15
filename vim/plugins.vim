@@ -32,13 +32,16 @@ call vundle#begin()
     Plugin 'airblade/vim-gitgutter'
 
     " NerdTree
-    Plugin 'scrooloose/nerdtree'
+    "Plugin 'scrooloose/nerdtree'
 
     " NERD Commenter
     Plugin 'scrooloose/nerdcommenter'
 
+    "Syntax Checking
+    Plugin 'scrooloose/syntastic'
+
     " CtrlP file search
-    Plugin 'ctrlpvim/ctrlp.vim'
+    "Plugin 'ctrlpvim/ctrlp.vim'
 
     " Airline - status line
     Plugin 'vim-airline/vim-airline'
@@ -76,7 +79,7 @@ call vundle#begin()
     Plugin 'petrushka/vim-sage'
 
     " Hardtime - habit breaking
-    Plugin 'takac/vim-hardtime'
+    "Plugin 'takac/vim-hardtime'
 
     " Indent Guides
     "Plugin 'nathanaelkane/vim-indent-guides'
@@ -127,6 +130,16 @@ colorscheme solarized
     nnoremap <leader>nt :NERDTree<CR>
     nnoremap <leader>ntq :NERDTreeClose<CR>
 " }}}
+" Syntastic Settings {{{
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+" }}}
 " CtrlP Settings {{{
 " }}}
 " Airline Settings {{{
@@ -158,6 +171,7 @@ colorscheme solarized
 " YouCompleteMe Settings {{{
     let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
     let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+    let g:ycm_global_ycm_extra_cont = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 " }}}
 " SuperTab Settings {{{
     let g:SuperTabDefaultCompletionType = '<C-n>'
