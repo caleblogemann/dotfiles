@@ -10,6 +10,6 @@ PATH=~/Library/Python/2.7/bin:$PATH
 PATH=/usr/local/bin:$PATH
 export PATH
 
-export HOMEBREW_CASK_OPTS='--caskroom=~/dotfiles/homebrew/Caskroom --appdir=~/Applications'
+export HOMEBREW_CASK_OPTS='--appdir=~/Applications'
 
 export DOGPACK=~/Documents/Education/Graduate/dogpack-developer
