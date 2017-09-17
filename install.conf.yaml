@@ -16,5 +16,5 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-    - [source bin/installFonts.sh]
-      #    - [source homebrew/install.sh]
+    - [source ~/dotfiles/bin/installFonts.sh, Installing Fonts]
+    - [source ~/dotfiles/homebrew/install.sh, Installing Homebrew]
