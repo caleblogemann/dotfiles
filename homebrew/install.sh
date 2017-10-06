@@ -12,5 +12,5 @@ fi
 brew update
 brew upgrade
 
-brew tap Hombrew/bundle
+brew tap Homebrew/bundle
 brew bundle
