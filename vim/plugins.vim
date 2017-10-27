@@ -50,6 +50,10 @@ call vundle#begin()
     " Surround
     Plugin 'tpope/vim-surround'
 
+    " delimitmate - autocomplete delimiters
+    Plugin 'raimondi/delimitmate'
+
+
     " Tagbar shows tags in vertical bar on right
     " requires exuberant ctags
     Plugin 'majutsushi/tagbar'
@@ -61,7 +65,7 @@ call vundle#begin()
     Plugin 'ervandew/supertab'
 
     " Completions - Requires difficult installation
-    Plugin 'Valloric/YouCompleteMe'
+    "Plugin 'Valloric/YouCompleteMe'
 
     " Snippets
     Plugin 'SirVer/ultisnips'
