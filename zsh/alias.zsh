@@ -80,6 +80,7 @@
             alias gotoREU='gotoGradCourses > /dev/null; cd REU2017'
             alias gotoREUBitbucket='gotoREU > /dev/null; cd isu-summer-reu-modcomp2017'
             alias gotoAERE546='gotoGradCourses > /dev/null; cd AERE546FluidMechanicsHeatTransferI'
+            alias gotoResearch='gotoGradCourses > /dev/null; cd Research'
 
         # Current Classes
             alias Hyperbolic='gotoMATH667'
@@ -93,7 +94,7 @@
             alias Applied='gotoMATH520'
             alias Finite='gotoMATH517'
             alias EGR='gotoMATH610'
-            alias Research='gotoMATH590'
+            alias Research='gotoResearch'
             alias PreCalc='gotoMATH143'
             alias Calc1='gotoMATH165'
             alias Calc2='gotoMATH166'
