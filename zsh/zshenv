@@ -13,3 +13,4 @@ export PATH
 export HOMEBREW_CASK_OPTS='--appdir=~/Applications'
 
 export DOGPACK=~/Documents/Education/Graduate/dogpack-developer
+#export DOGPACK=~/Desktop/dogpack-developer
