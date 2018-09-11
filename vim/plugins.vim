@@ -201,6 +201,8 @@ let g:syntastic_check_on_wq = 0
     " can be detected and snippets can be stored in git repo
     let g:UltiSnipsSnippetDirectories=[$HOME.'/dotfiles/vim/UltiSnips']
     let g:UltiSnipsSnippetsDir=$HOME.'/dotfiles/vim/UltiSnips'
+    
+    let g:UltiSnipsUsePythonVersion = 3
 " }}}
 " Gundo Settings {{{
     nnoremap <leader>u :GundoToggle<CR>
