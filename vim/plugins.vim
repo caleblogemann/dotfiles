@@ -50,6 +50,10 @@ call vundle#begin()
     " Surround
     Plugin 'tpope/vim-surround'
 
+    " delimitmate - autocomplete delimiters
+    Plugin 'raimondi/delimitmate'
+
+
     " Tagbar shows tags in vertical bar on right
     " requires exuberant ctags
     Plugin 'majutsushi/tagbar'
@@ -61,7 +65,7 @@ call vundle#begin()
     Plugin 'ervandew/supertab'
 
     " Completions - Requires difficult installation
-    Plugin 'Valloric/YouCompleteMe'
+    "Plugin 'Valloric/YouCompleteMe'
 
     " Snippets
     Plugin 'SirVer/ultisnips'
@@ -200,6 +204,8 @@ let g:syntastic_check_on_wq = 0
     " can be detected and snippets can be stored in git repo
     let g:UltiSnipsSnippetDirectories=[$HOME.'/dotfiles/vim/UltiSnips']
     let g:UltiSnipsSnippetsDir=$HOME.'/dotfiles/vim/UltiSnips'
+    
+    let g:UltiSnipsUsePythonVersion = 3
 " }}}
 " Gundo Settings {{{
     nnoremap <leader>u :GundoToggle<CR>
