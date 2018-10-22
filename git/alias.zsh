@@ -75,3 +75,8 @@ alias gRsu='git remote set-url --add'
 # status aliases (s)                   #
 ########################################
 alias gst='git status'
+
+########################################
+# reset aliases (r)                   #
+########################################
+alias grH='git reset HEAD'

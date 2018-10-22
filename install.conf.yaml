@@ -13,6 +13,7 @@
     ~/.gitconfig: git/gitconfig
     ~/.ctags: ctags
     ~/.latexmkrc: tex/latexmkrc
+    ~/.lldbinit: lldb/lldbinit
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

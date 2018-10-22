@@ -7,6 +7,7 @@ PATH=/usr/local/texlive/2017/bin/x86_64-darwin:$PATH
 PATH=/usr/local/texlive/2015/bin/x86_64-darwin:$PATH
 PATH=~/dotfiles/bin:$PATH
 PATH=~/Library/Python/2.7/bin:$PATH
+PATH=/usr/local/opt/python/libexec/bin:$PATH
 PATH=/usr/local/bin:$PATH
 export PATH
 
