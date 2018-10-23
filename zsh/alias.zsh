@@ -65,8 +65,8 @@
             alias gotoMATH520='gotoGradCourses > /dev/null; cd MATH520MethodsAppliedMathII'
             #alias gotoMATH561='gotoGradCourses > /dev/null; cd MATH561NumericalAnalysisI'
             alias gotoMATH561='gotoGradTeaching > /dev/null; cd MATH561NumericalAnalysisI'
+            alias gotoMATH562='gotoGradTeaching > /dev/null; cd MATH562Teaching'
             #alias gotoMATH562='gotoGradCourses > /dev/null; cd MATH562NumericalAnalysisII'
-            alias gotoMATH562='gotoGradTeaching > /dev/null; cd MATH562NumericalAnalysisII'
             alias gotoMATH565='gotoGradCourses > /dev/null; cd MATH565ContinuousOptimization'
             #alias gotoMATH566='gotoGradCourses > /dev/null; cd MATH566DiscreteOptimization'
             alias gotoMATH566='gotoGradTeaching > /dev/null; cd MATH566DiscreteOptimization'
@@ -74,6 +74,7 @@
             alias gotoMATH591='gotoGradCourses > /dev/null; cd MATH591OrientationSeminarI'
             alias gotoMATH592='gotoGradCourses > /dev/null; cd MATH592OrientationSeminarII'
             alias gotoMATH610='gotoGradCourses > /dev/null; cd MATH610EarlyGraduateResearch'
+            alias gotoMATH666='gotoGradCourses > /dev/null; cd MATH666FiniteElementMethods'
             alias gotoMATH667='gotoGradCourses > /dev/null; cd MATH667HyperbolicPDEs'
             alias gotoNumericalQual='gotoGradCourses > /dev/null; cd NumericalQual'
             alias gotoAppliedQual='gotoGradCourses > /dev/null; cd AppliedQual'
@@ -81,11 +82,16 @@
             alias gotoREU='gotoGradCourses > /dev/null; cd REU2017'
             alias gotoREUBitbucket='gotoREU > /dev/null; cd isu-summer-reu-modcomp2017'
             alias gotoAERE546='gotoGradCourses > /dev/null; cd AERE546FluidMechanicsHeatTransferI'
+            alias gotoAERE504='gotoGradCourses > /dev/null; cd AERE504IntelligentAirSystems'
+            alias gotoEM510='gotoGradCourses > /dev/null; cd EM510ContinuumMechanics'
             alias gotoResearch='gotoGradCourses > /dev/null; cd Research'
+            alias gotoSIAM='gotoGradCourses > /dev/null; cd SIAM'
 
         # Current Classes
+            alias FEM='gotoMATH666'
+            alias CM='gotoEM510'
             alias Hyperbolic='gotoMATH667'
-            alias AERE='gotoAERE546'
+            alias AERE='gotoAERE504'
             alias ScientificComputing='gotoMATH373'
             alias PDEs='gotoMATH385'
             alias REU='gotoREUBitbucket'
@@ -103,6 +109,7 @@
             alias DiffEQ='gotoMATH267'
             alias Discrete='gotoMATH566'
             alias Continuous='gotoMATH565'
+            alias SIAM='gotoSIAM'
 
 #################################################
 # Maven Aliases                                 #

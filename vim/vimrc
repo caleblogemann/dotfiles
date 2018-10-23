@@ -64,6 +64,9 @@
     " highlight line that cursor is on
     set cursorline
 
+    " highlight past column 80
+    let &colorcolumn=join(range(81,999),",")
+
     " do not highlight spelling mistake
     " use mapping <localleader>sc to enable spellchecking in local buffer
     set nospell

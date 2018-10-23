@@ -129,5 +129,11 @@
 
     " copy to clipboard
     vnoremap <leader>c "*y
+
+    " change K to go to top of file
+    vnoremap K gg
+
+    " change J to go to bottom of file
+    vnoremap J G
 " }}}
 " vim:foldmethod=marker:foldlevel=0

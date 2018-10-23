@@ -15,3 +15,4 @@ iabbrev whcih which
 iabbrev lienar linear
 iabbrev adn and
 iabbrev lamdba lambda
+iabbrev Omgea Omega

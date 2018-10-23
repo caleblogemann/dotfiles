@@ -88,6 +88,9 @@ call vundle#begin()
     " Sage
     Plugin 'petrushka/vim-sage'
 
+    " Julia
+    Plugin 'JuliaEditorSupport/julia-vim'
+
     " Hardtime - habit breaking
     "Plugin 'takac/vim-hardtime'
 
