@@ -76,8 +76,14 @@ call vundle#begin()
     " Gundo - accesses vim's undo tree
     Plugin 'sjl/gundo.vim'
 
+    " Folding
+    Plugin 'pseewald/vim-anyfold'
+
     " Matlab
     Plugin 'MatlabFilesEdition'
+
+    " Julia
+    Plugin 'JuliaEditorSupport/julia-vim'
 
     " Sage
     Plugin 'petrushka/vim-sage'
@@ -206,6 +212,10 @@ let g:syntastic_check_on_wq = 0
 " }}}
 " Gundo Settings {{{
     nnoremap <leader>u :GundoToggle<CR>
+" }}}
+" vim-anyfold Settings {{{
+    let g:anyfold_activate=1
+    set foldlevel=0
 " }}}
 " vim-hardtime Settings {{{
     let g:list_of_normal_keys = ["h", "j", "k", "l", "-", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
