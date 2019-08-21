@@ -50,9 +50,11 @@ call vundle#begin()
     " Surround
     Plugin 'tpope/vim-surround'
 
+    " Tabular
+    Plugin 'godlygeek/tabular'
+
     " delimitmate - autocomplete delimiters
     Plugin 'raimondi/delimitmate'
-
 
     " Tagbar shows tags in vertical bar on right
     " requires exuberant ctags
@@ -87,9 +89,6 @@ call vundle#begin()
 
     " Sage
     Plugin 'petrushka/vim-sage'
-
-    " Julia
-    Plugin 'JuliaEditorSupport/julia-vim'
 
     " Hardtime - habit breaking
     "Plugin 'takac/vim-hardtime'
@@ -135,37 +134,32 @@ endif
 " set colorscheme from list of configured colorschemes
 colorscheme solarized
 
-" Fugitive Settings {{{
+" Fugitive Settings
     nnoremap <leader>gs :Gstatus<CR>
     nnoremap <leader>gd :Gdiff<CR>
     nnoremap <leader>gp :Gpush<CR>
     nnoremap <leader>gfm :Gpull<CR>
     nnoremap <leader>gl :Glog<CR>
     nnoremap <leader>gc :Gcommit<CR>
-" }}}
-" NERDTree Settings {{{
+" NERDTree Settings
     nnoremap <leader>nt :NERDTree<CR>
     nnoremap <leader>ntq :NERDTreeClose<CR>
-" }}}
-" Syntastic Settings {{{
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" Syntastic Settings
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-" }}}
-" CtrlP Settings {{{
-" }}}
-" Airline Settings {{{
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 1
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 0
+" CtrlP Settings
+" Airline Settings
     " show all buffers when only one tab
     let g:airline#extensions#tabline#enabled = 1
     " use powerline fonts
     let g:airline_powerline_fonts = 1
-" }}}
-" Tagbar Settings {{{
+" Tagbar Settings
     let g:tagbar_width = 30
     nmap <leader>t :TagbarToggle<CR>
 
@@ -182,19 +176,15 @@ let g:syntastic_check_on_wq = 0
             \ 'i:items:1:0',
         \ ],
     \ }
-" }}}
-" EasyMotion Settings {{{
-" }}}
-" YouCompleteMe Settings {{{
+" EasyMotion Settings
+" YouCompleteMe Settings
     let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
     let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
     let g:ycm_global_ycm_extra_cont = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
     let g:ycm_confirm_extra_conf = 0
-" }}}
-" SuperTab Settings {{{
+" SuperTab Settings
     let g:SuperTabDefaultCompletionType = '<C-n>'
-" }}}
-" Ultisnips Settings {{{
+" Ultisnips Settings
     " Trigger configuration. Do not use <tab> if you use
     " https://github.com/Valloric/YouCompleteMe.
     " If using SuperTab <tab> is okay
@@ -212,23 +202,17 @@ let g:syntastic_check_on_wq = 0
     let g:UltiSnipsSnippetsDir=$HOME.'/dotfiles/vim/UltiSnips'
     
     let g:UltiSnipsUsePythonVersion = 3
-" }}}
-" Gundo Settings {{{
+" Gundo Settings
     nnoremap <leader>u :GundoToggle<CR>
-" }}}
-" vim-anyfold Settings {{{
+    let g:gundo_prefer_python3 = 1
+" vim-anyfold Settings
     let g:anyfold_activate=1
     set foldlevel=0
-" }}}
-" vim-hardtime Settings {{{
+" vim-hardtime Settings
     let g:list_of_normal_keys = ["h", "j", "k", "l", "-", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
     let g:list_of_visual_keys = ["h", "j", "k", "l", "-", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
     let g:list_of_insert_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
     let g:list_of_disabled_keys = []
     let g:hardtime_maxcount = 3
-" }}}
-" a.vim Settings {{{
+" a.vim Settings
     nnoremap <leader>a :A<CR>
-" }}}
-" 
-" vim:foldmethod=marker:foldlevel=0
