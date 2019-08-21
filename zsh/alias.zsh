@@ -137,7 +137,7 @@
     alias l='ls -al'
     alias mmv='noglob zmv -W'
     alias scipy='ipython --pylab'
-    alias plotdog1='python $DOGPACK/viz/python/plotdog1.py'
+    alias plotdog='python $DOGPACK/viz/python/plotdog.py'
     #alias g++='g++-7'
 
 #################################################
