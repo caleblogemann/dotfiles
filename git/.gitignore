@@ -16,6 +16,7 @@
 *.snm
 *.bcf
 *.run.xml
+*.synctex.gz
 # sagetex files
 *.sagetex.sage
 *.sagetex.sage.py
