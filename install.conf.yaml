@@ -15,8 +15,9 @@
     ~/.latexmkrc: tex/latexmkrc
     ~/.lldbinit: lldb/lldbinit
     ~/.config/flake8: python/flake8
+    ~/.clang-format: clang-format
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-    - [source ~/dotfiles/bin/installFonts.sh, Installing Fonts]
-    - [source ~/dotfiles/homebrew/install.sh, Installing Homebrew]
+    #- [source ~/dotfiles/bin/installFonts.sh, Installing Fonts]
+    #- [source ~/dotfiles/homebrew/install.sh, Installing Homebrew]
