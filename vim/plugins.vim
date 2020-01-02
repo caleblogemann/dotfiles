@@ -201,12 +201,12 @@ colorscheme solarized
     let g:UltiSnipsSnippetDirectories=[$HOME.'/dotfiles/vim/UltiSnips']
     let g:UltiSnipsSnippetsDir=$HOME.'/dotfiles/vim/UltiSnips'
     
-    let g:UltiSnipsUsePythonVersion = 3
+    "let g:UltiSnipsUsePythonVersion = 3
 " Gundo Settings
     nnoremap <leader>u :GundoToggle<CR>
     let g:gundo_prefer_python3 = 1
 " vim-anyfold Settings
-    let g:anyfold_activate=1
+    nnoremap <leader>af :AnyFoldActivate<CR>
     set foldlevel=0
 " vim-hardtime Settings
     let g:list_of_normal_keys = ["h", "j", "k", "l", "-", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]

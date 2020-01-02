@@ -35,3 +35,6 @@
 *.sublime-workspace
 *.merged-ca-bundle
 *.user-ca-bundle
+
+# jupyter
+*checkpoint.ipynb

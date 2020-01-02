@@ -84,8 +84,9 @@
             alias gotoAERE546='gotoGradCourses > /dev/null; cd AERE546FluidMechanicsHeatTransferI'
             alias gotoAERE504='gotoGradCourses > /dev/null; cd AERE504IntelligentAirSystems'
             alias gotoEM510='gotoGradCourses > /dev/null; cd EM510ContinuumMechanics'
-            alias gotoResearch='gotoGrad > /dev/null; cd Research'
             alias gotoSIAM='gotoGradCourses > /dev/null; cd SIAM'
+            alias gotoResearch='gotoGrad > /dev/null; cd Research'
+            alias gotoPyDogPack='gotoResearch > /dev/null; cd Python/PyDogPack'
 
         # Current Classes
             alias FEM='gotoMATH666'
@@ -96,6 +97,7 @@
             alias PDEs='gotoMATH385'
             alias REU='gotoREUBitbucket'
             alias Dogpack='gotoDogpack'
+            alias PyDogPack='gotoPyDogPack'
             alias Numerical='gotoMATH562'
             alias NumericalQual='gotoNumericalQual'
             alias AppliedQual='gotoAppliedQual'
@@ -138,11 +140,13 @@
     alias mmv='noglob zmv -W'
     alias scipy='ipython --pylab'
     alias plotdog='python $DOGPACK/viz/python/plotdog.py'
+    alias vim='$HOME/Applications/MacVim.app/Contents/bin/vim'
+    alias sage='$HOME/Applications/SageMath/sage'
     #alias g++='g++-7'
 
 #################################################
 # Latex                                         #
 #################################################
     setopt null_glob # set null_glob so that rm still runs if pattern is not matched
-    alias rmLatex='rm *.aux(N) *.log(N) *.fls(N) *.fdb_latexmk(N) *.bbl(N) *.blg(N) *.lof(N) *.lot(N) *.toc(N) *.bcf(N) *.run.xml(N) *.nav(N) *.out(N) *.snm(N) *.sagetex.sage(N) *.sagetex.sage.py(N) *.sagetex.sout(N) *.sagetex.scmd(N)'
+        alias rmLatex='rm *.aux(N) *.log(N) *.fls(N) *.fdb_latexmk(N) *.bbl(N) *.blg(N) *.lof(N) *.lot(N) *.toc(N) *.bcf(N) *.run.xml(N) *.nav(N) *.out(N) *.snm(N) *.sagetex.sage(N) *.sagetex.sage.py(N) *.sagetex.sout(N) *.sagetex.scmd(N), *.synctex.gz(N)'
     alias rmPython='rm *.pyc(N)'

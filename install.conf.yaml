@@ -15,6 +15,7 @@
     ~/.latexmkrc: tex/latexmkrc
     ~/.lldbinit: lldb/lldbinit
     ~/.config/flake8: python/flake8
+    ~/.condarc: python/condarc
     ~/.clang-format: clang-format
 
 - shell:
