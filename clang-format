@@ -4,6 +4,8 @@ BasedOnStyle:  Chromium
 AccessModifierOffset: 4
 ColumnLimit: 88
 IndentWidth: 4
+NamespaceIndentation: All
+
 
 # Chromium Default Values
 #AccessModifierOffset: -1
