@@ -43,7 +43,7 @@
             alias gotoMechanics='gotoUndergradPhysics > /dev/null; cd Mechanics'
             alias gotoNumericalMethods='gotoUndergradMath > /dev/null; cd NumericalMethods'
             alias gotoRealAnalysis='gotoUndergradMath > /dev/null; cd RealAnalysis'
-            alias gotoResearch='gotoUndergradMath > /dev/null; cd Research'
+            #alias gotoResearch='gotoUndergradMath > /dev/null; cd Research'
             alias gotoFoundations='gotoUndergradMath > /dev/null; cd Foundations'
             alias gotoOperatingSystems='gotoUndergradCS > /dev/null; cd OperatingSystems'
             alias gotoSpanish='gotoUndergradGenEd > /dev/null; cd Spanish'
@@ -84,7 +84,7 @@
             alias gotoAERE546='gotoGradCourses > /dev/null; cd AERE546FluidMechanicsHeatTransferI'
             alias gotoAERE504='gotoGradCourses > /dev/null; cd AERE504IntelligentAirSystems'
             alias gotoEM510='gotoGradCourses > /dev/null; cd EM510ContinuumMechanics'
-            alias gotoResearch='gotoGradCourses > /dev/null; cd Research'
+            alias gotoResearch='gotoGrad > /dev/null; cd Research'
             alias gotoSIAM='gotoGradCourses > /dev/null; cd SIAM'
 
         # Current Classes
