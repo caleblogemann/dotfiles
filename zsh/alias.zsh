@@ -142,6 +142,7 @@
     alias plotdog='python $DOGPACK/viz/python/plotdog.py'
     alias vim='$HOME/Applications/MacVim.app/Contents/bin/vim'
     alias sage='$HOME/Applications/SageMath/sage'
+    alias sagenb='sage --notebook=jupyter'
     #alias g++='g++-7'
 
 #################################################
