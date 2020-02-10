@@ -1,0 +1,9 @@
+name: sage
+channels:
+    - conda-forge
+    - defaults
+dependencies:
+    - sage
+    - jupyterlab=0.33
+    - jupyter
+    - nodejs
