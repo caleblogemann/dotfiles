@@ -142,7 +142,7 @@
     alias mmv='noglob zmv -W'
     alias scipy='ipython --pylab'
     alias plotdog='python $DOGPACK/viz/python/plotdog.py -p 10'
-    #alias vim='$HOME/Applications/MacVim.app/Contents/bin/vim'
+    alias vim='$HOME/Applications/MacVim.app/Contents/bin/vim'
     #alias g++='g++-7'
 
 #################################################
