@@ -16,6 +16,4 @@ export HOMEBREW_CASK_OPTS='--appdir=~/Applications'
 
 export DOGPACK=~/Documents/Education/Graduate/dogpack-developer
 export MESHGEN_DOGPACK=~/Documents/Education/Graduate/meshgen-dogpack
-#export DOGPACK=~/Desktop/dogpack-developer
-
 export PYDOGPACK=~/Documents/Education/Graduate/Research/Python/PyDogPack
