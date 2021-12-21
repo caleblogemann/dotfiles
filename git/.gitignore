@@ -17,6 +17,7 @@
 *.bcf
 *.run.xml
 *.synctex.gz
+*__latexindent_temp.tex
 # sagetex files
 *.sagetex.sage
 *.sagetex.sage.py

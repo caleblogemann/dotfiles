@@ -1,4 +1,13 @@
 [flake8]
 /*ignore = E731,W503,E203,F401*/
-ignore = E731,W503,E203
+ignore = 
+    # ignore warnings about assigning lambda functions
+    E731,
+    # line breaks before binary operator, occurs with black formatter 
+    W503,
+    # whitespace before :, needed with black formatter
+    E203
+exclude = 
+    .git,
+    *.sage
 max-line-length = 88
