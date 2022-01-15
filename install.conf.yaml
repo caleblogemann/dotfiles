@@ -17,6 +17,7 @@
     ~/.config/flake8: python/flake8
     ~/.condarc: python/condarc
     ~/.clang-format: clang-format
+    ~/.pylintrc: python/pylintrc
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
