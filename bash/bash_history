@@ -1,0 +1,111 @@
+l
+PyDogPack 
+PyDogPack 
+gst
+echo $LS_COLORS
+echo $LSCOLORS
+l
+gotoDotfiles 
+l
+cd bash/
+vim bash_prompt.bash 
+l
+cd dotfiles/
+l
+tput setaf 1
+tput setaf 2
+tput setaf 3
+tput setaf 4
+tput setaf 5
+tput setaf 6
+tput setaf 7
+tput setaf 8
+tput setaf 9
+tput setaf 10
+tput setaf 1`
+1
+tput setaf 11
+'
+
+tput setaf 11
+tput setaf 12
+tput setaf 12
+tput setaf 13
+tput setaf 14
+tput setaf 15
+tput setaf 16
+tput setaf 17
+tput setaf 18
+tput setaf 0
+tput setaf 1
+tput setaf 2
+tput setaf 3
+tput setaf 1
+tput setaf 2
+tput setaf 3
+tput setaf 4
+tput setaf 5
+tput setaf 6
+tput setaf 7
+vim dotfiles/bash/bash_prompt.bash 
+l
+cd dotfiles/
+l
+cd bash/
+l
+cd ..
+l
+cd git/
+vim alias.zsh 
+cd ../vim/
+l
+cd ..
+vim zsh/alias.zsh 
+cd ..
+cd ..
+cd caleblogemann/
+vim .bash_profile 
+cd dotfiles/
+l
+cd bash/
+l
+cp ../zsh/alias.zsh alias.bash
+l
+vim alias.bash 
+cd ..
+l
+cd git/
+l
+vim alias.zsh 
+mv alias.zsh alias.sh
+ln -s ~/dotfiles/git/alias.sh ~/dotfiles/git/alias.zsh
+ln -s ~/dotfiles/git/alias.sh ~/dotfiles/git/alias.bash
+l
+cd ..
+l
+cd python/
+l
+cd ..
+cd tex/
+l
+cd ..
+l
+which vim
+cd Documents/Education/Graduate/Research/
+gst
+l
+vim .bash_profile 
+l
+vim .bash_profile 
+vim .bash_profile 
+vim .bash_profile 
+vim .bashrc 
+l
+rm .bashrc 
+vim .bashenv 
+l
+cd dotfiles/
+l
+cd bash/
+l
+vim bash_prompt.bash 

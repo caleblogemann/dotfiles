@@ -6,6 +6,7 @@
 PATH=/usr/local/texlive/2017/bin/x86_64-darwin:$PATH
 PATH=/usr/local/texlive/2018/bin/x86_64-darwin:$PATH
 PATH=/usr/local/texlive/2019/bin/x86_64-darwin:$PATH
+PATH=/usr/local/texlive/2021/bin/universal-darwin:$PATH
 PATH=~/dotfiles/bin:$PATH
 PATH=/usr/local/opt/python/libexec/bin:$PATH
 PATH=/usr/local/bin:$PATH
@@ -14,7 +15,8 @@ export PATH
 export HOMEBREW_CASK_OPTS='--appdir=~/Applications'
 
 export DOGPACK=~/Documents/Education/Graduate/dogpack-developer
+export MESHGEN_DOGPACK=~/Documents/Education/Graduate/meshgen-dogpack
+export QHULL=/usr/local
 export PYDOGPACK=~/Documents/Education/Graduate/Research/Python/PyDogPack
+export MESHGENCPP=~/Documents/Education/Graduate/meshgencpp
 #export DOGPACK=~/Desktop/dogpack-developer
-
-export PYDOGPACK=~/Documents/Education/Graduate/Research/Python/PyDogPack
